@@ -23,7 +23,7 @@ output:
           family: sans
           size: 2
       includes:
-        before_body: ../scripts/code_fold.html  # for optional folding of code or output
+        before_body: scripts/code_fold.html  # for optional folding of code or output
     # bookdown::tufte_html_book:
     #   toc: yes
     #   css: [toc.css, ../notebooks.css]

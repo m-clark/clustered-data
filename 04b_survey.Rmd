@@ -1,0 +1,45 @@
+# A Survey Approach
+
+I will only briefly mention an approach using survey design to show the similarity of results in that scenario to using cluster robust standard errors. We'll use the <span class="pack">survey</span> package and subsequent <span class="func">svyglm</span> function.
+
+For comparison, we'll use a cluster-based sampling design and nothing more.  This assumes we are sampling clusters from the population of interest for which we want to make inferences to. To use most survey versions of models, the design must be specified a priori.
+
+```{r svy}
+library(survey)
+
+design = svydesign(ids=~id, data=d)
+svy_mod = svyglm(y ~ time + treatment, data=d, design=design)
+summary(svy_mod)
+```
+
+These are quite similar to the cluster robust standard errors we got earlier. 
+
+```{r svyclusrob_compare, echo=F}
+(xvar %*% Reduce(`+`, gd$xvar) %*% xvar) %>% diag %>% sqrt %>% round(6)
+```
+
+In fact, they'd be identical by using a <span class="emph">finite population correction</span> on the latter. 
+
+```{r echo=F, eval=T}
+fpc = ((nrow(d) - 1)/(nrow(d)-3))
+test = vcovHC(clusterrob_mod, method='arellano', cluster='group') %>% diag %>% sqrt 
+test = (xvar %*% Reduce(`+`, gd$xvar) %*% xvar) %>% diag %>% sqrt
+round(test*fpc, 6)
+```
+
+
+I only note pros and cons that are relevant for our purposes.  The pros and cons of dealing with survey design in general are quite complex and better hashed out elsewhere.
+
+## Pros
+
+- Can incorporate different and quite complicated sampling designs
+- More confidence in inference to the populations of interest
+
+## Cons
+
+- The complexity of incorporating complex design and associated weights
+- Beyond simpler settings it can be difficult to tell how best to utilize survey design within the modeling context
+
+Gist: Our goal here was merely to provide a connection to survey design, but that's a whole other situation that will not be considered further.
+
+
