@@ -75,6 +75,10 @@ lm_robse
 - Ignores cluster-specific effects
 - By default, assumes no intracluster correlation
 - Few tools go beyond simple clustering, requiring manual approach
+- Not as general as GEE approach
 - Suggests that there are problems in model specification that the method itself does not correct
 
-Gist: if your goal is to simply do a standard GLM approach and essentially ignore the clustering, treating it more or less as a nuisance to overcome, and your grouping structure is simple, then this may be for you. However, note that the [GEE][Generalized Estimating Equations] approach as a possibly more flexible alternative that can still incorporate cluster robust standard errors.  Furthermore, differences between the robust and regular SE may suggest a model misspecification issue. 'Fixing' standard errors won't solve that problem.
+Gist: if your goal is to simply do a standard GLM approach and essentially ignore the clustering, treating it more or less as a nuisance to overcome, and your grouping structure is simple, then this may be for you. However, note that the [GEE][Generalized Estimating Equations] approach as a possibly more flexible alternative that can still incorporate cluster robust standard errors[^clusrob_specialcase].  Furthermore, differences between the robust and regular SE may suggest a model misspecification issue. 'Fixing' standard errors won't solve that problem.
+
+
+[^clusrob_specialcase]: The cluster robust standard errors as depicted above assume independent error structure in the GEE model, and thus are a special case of GEE.  When you peruse the GEE model, rerun it with the argument `corst='ind'` to duplicate the plm and custom results above.

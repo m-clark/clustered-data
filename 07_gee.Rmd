@@ -60,6 +60,7 @@ GEE models are generally robust to misspecification of the covariance structure.
 
 - Easy modeling of different correlation structures
 - Focus on population level effects
+- Extends the cluster robust approach to glm setting and other correlation structures[^clusrob_recall]
 - Robust to misspecification of correlation structure
 - May be more feasible with larger data situations than mixed models
 
@@ -82,3 +83,5 @@ $$ y \sim \mathcal{N}(X\beta + Z\Gamma,  \Sigma) $$
 where $Z$ is some subset of $X$, and $\Gamma$ contains the random effects.
 
 [^kerby]: CSCAR director [Kerby Shedden](https://github.com/kshedden) has worked on a Python implementation for nested structures as part of the [statsmodels module](http://statsmodels.sourceforge.net/devel/gee.html).
+
+[^clusrob_recall]: Recall the note at the end of the [cluster robust SE chapter][Cluster robust variances].

@@ -7,6 +7,7 @@ These references are a mix of starting points, interesting notes, and more autho
 ## Robust SE
 
 - King & Roberts. (2015). How Robust Standard Errors Expose Methodological Problems They Do Not Fix. *Political Analysis*.
+- Trivedi, C. (2011). [Robust Inference with Clustered Data](http://www.stata.com/meeting/mexico11/materials/cameron.pdf). 
 
 
 ## Fixed effects and 'panel' data models
@@ -27,7 +28,7 @@ These references are a mix of starting points, interesting notes, and more autho
 
 ## GEE
 
-To be honest I can't speak to these directly, though I've read and would recommend Hardin and Hilbe's GLM book, and this is a similar approach (applied with Stata examples).
+To be honest I can't speak to this reference from experience, though I've read and would recommend Hardin and Hilbe's GLM book, and this is a similar approach (applied with Stata examples).
 
 - Hardin & Hilbe (2013). Generalized Estimating Equations. [link](https://www.crcpress.com/Generalized-Estimating-Equations-Second-Edition/Hardin-Hilbe/p/book/9781439881132) 
 
