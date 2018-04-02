@@ -56,11 +56,13 @@ intsd^2 + timesd^2 + sigmasq              # 'truth'
 GEE models are generally robust to misspecification of the covariance structure.  They are rarely implemented for more than simple clustering but some tools allow for it[^kerby].
 
 
+Where GEE differ from random effects models in interpretation regards non-Gaussian models.  Consider a gender effect for a binary outcome where individuals are nested within families.  In this case we could use a standard logistic regression, but would want to take the clustering into account.  The gender effect for GEE is comparing hypothetical males in many different families to hypothetical females in many different families (controlling for other covariates).  In the mixed model with a random effect for family, you are comparing males in one family to females in the same family (again controlling for other factors).  The latter odds ratio will typically be larger because there is less fluctuation due to family-to-family differences[^kerby2].  However, this isn't a *larger* effect, just a different one.
+
 ## Pros
 
 - Easy modeling of different correlation structures
 - Focus on population level effects
-- Extends the cluster robust approach to glm setting and other correlation structures[^clusrob_recall]
+- Extends the cluster robust approach to GLM setting and other correlation structures[^clusrob_recall]
 - Robust to misspecification of correlation structure
 - May be more feasible with larger data situations than mixed models
 
@@ -70,7 +72,7 @@ GEE models are generally robust to misspecification of the covariance structure.
 - Not easily extendable to other clustering situations, e.g. nested
 - Missing data is assumed Missing Completely at Random (MCAR) (RE and FE assume MAR)
 
-Gist: If your goal is to focus on population average effects and ignore subject specific effects, without the drawbacks of the FE model, this might be considered
+Gist: If your goal is to focus on population average effects and ignore subject specific effects, without the drawbacks of the FE model, the GEE approach might be considered.
 
 
 
@@ -82,6 +84,8 @@ Gist: If your goal is to focus on population average effects and ignore subject 
 $$ y \sim \mathcal{N}(X\beta + Z\Gamma,  \Sigma) $$
 where $Z$ is some subset of $X$, and $\Gamma$ contains the random effects.
 
-[^kerby]: CSCAR director [Kerby Shedden](https://github.com/kshedden) has worked on a Python implementation for nested structures as part of the [statsmodels module](http://statsmodels.sourceforge.net/devel/gee.html).
+[^kerby]: CSCAR director and University of Michigan statistics faculty [Kerby Shedden](https://github.com/kshedden) has worked on a Python implementation for nested structures as part of the [statsmodels module](http://statsmodels.sourceforge.net/devel/gee.html).
 
 [^clusrob_recall]: Recall the note at the end of the [cluster robust SE chapter][Cluster robust variances].
+
+[^kerby2]: This is a paraphrase of a response by Kerby Shedden to a question on the CSCAR help list that I thought was succinct and easy to understand.  He continues: "I don't have a strong opinion about this.  It is almost always good to control for observed variables to reduce heterogeneity and get a sharper analysis.  But it's less clear to me that you should control for things that are unattributable (e.g. family effects of unknown cause), even if it is technically possible to do so.  It comes down to this: do you want to measure my risk (for being male) by comparing me to my sister (or an imaginary sister who is identical to me in all observables except gender)...or do you want to compare me to an unrelated female, also identical to me in terms of all observables?"

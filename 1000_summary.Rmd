@@ -50,10 +50,14 @@ Here we'll compare variance estimates.  I add mixed and gee models with no resid
 ```{r varEstimates, echo=FALSE}
 gee_mod_nocorr = geeglm(y ~ time + treatment, data=d, corstr='independence', id=id, waves=time)
 mixed_mod_ri_nocorr = lme(y ~ time + treatment, random = ~1|id)
+lmg_var = matrixStats::colVars(as.matrix(coef(lottalm)))
 
 lmResults = data_frame(`Residual Var.` = summary(lm_mod)$sigma^2, `Intercept Var.`=NA, `Time Var`=NA, `Residual Cor`=NA)
 
-lmGroupedResults = data_frame(`Residual Var.` = NA, `Intercept Var.`=NA, `Time Var`=NA, `Residual Cor`=NA)
+lmGroupedResults = data_frame(`Residual Var.` = summary(lottalm)$RSE^2, 
+                              `Intercept Var.`=lmg_var[1], 
+                              `Time Var`=lmg_var[2], 
+                              `Residual Cor`=NA)
 
 clusterrobResults = data_frame(`Residual Var.` = c(crossprod(clusterrob_mod$residuals)/clusterrob_mod$df.residual),
                                `Intercept Var.`=NA, `Time Var`=NA, `Residual Cor`=NA)
@@ -106,7 +110,7 @@ datatable(var_results, rownames=F, fillContainer=F, autoHideNavigation=F,
 
 <br>
 
-Cluster robust modifications alone will change nothing compared to a SLiM except for the standard errors of the main effects. A GEE approach with an independence structure and constant residual variance is equivalent to the SLiM. The FE residual variance is equivalent to the SLiM if `id` had been included in the model, and is equivalent to that estimated by an RE intercept only model with no residual dependency estimated.  The estimates of RE model with random intercepts and slopes but no correlation structure assumed are identical to the growth curve estimates.
+Cluster robust modifications alone will change nothing compared to a SLiM except for the standard errors of the main effects. A GEE approach with an independence structure and constant residual variance is equivalent to the SLiM. The FE residual variance is equivalent to the SLiM if `id` had been included in the model, and is equivalent to that estimated by an RE intercept only model with no residual dependency estimated.  The estimates of RE model with random intercepts and slopes but no correlation structure assumed are identical to the growth curve estimates.  We can also see that the by-group SLiM approach overfits, allowing too much variability in group-specific intercepts and slopes relative to the mixed model .
 
 ## Conclusion
 

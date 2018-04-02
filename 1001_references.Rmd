@@ -19,7 +19,7 @@ These references are a mix of starting points, interesting notes, and more autho
 
 ## Mixed models
 
-- [My overview](https://m-clark.github.io/docs/mixedModels/mixedModels.html).
+- [My documents](https://m-clark.github.io/documents/#mixed-models) and [workshop notes](https://m-clark.github.io/mixed-models-with-R/).
 - Gelman & Hill. (2006). Data Analysis Using Regression and Multilevel/Hierarchical Models. [link](http://www.stat.columbia.edu/~gelman/arm/)
 - Pinheiro & Bates. (2000). Mixed-Effects Models in S and S-PLUS. [link](http://link.springer.com/book/10.1007%2Fb98882)
 - Fahrmeier et al. (2013). Regression. [link](http://www.springer.com/us/book/9783642343322)
@@ -37,7 +37,11 @@ To be honest I can't speak to this reference from experience, though I've read a
 
 - Kline. (2015). Principles and Practice of Structural Equation Modeling. [link](http://www.guilford.com/books/Principles-and-Practice-of-Structural-Equation-Modeling/Rex-Kline/9781462523344)
 
-- [My SEM notes](http://m-clark.github.io/docs/sem/latent-growth-curves.html)
+- [My SEM notes](http://m-clark.github.io/sem/latent-growth-curves.html)
+
+## Survey Analysis
+
+- Lumley, T. (2010) [Complex Surveys: A Guide to Analysis Using R](https://www.wiley.com/en-us/Complex+Surveys%3A+A+Guide+to+Analysis+Using+R-p-9780470284308).
 
 
 ## Comparison/Issues
