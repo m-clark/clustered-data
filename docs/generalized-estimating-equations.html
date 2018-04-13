@@ -24,7 +24,7 @@
 
 
 
-<meta name="date" content="2018-04-01">
+<meta name="date" content="2018-04-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -234,7 +234,7 @@ $(document).ready(function() {
 </script>
 <div id="generalized-estimating-equations" class="section level1">
 <h1>Generalized Estimating Equations</h1>
-<p>A <span class="emph">generalized estimating equation</span> is an <em>estimation procedure</em><a href="#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a> for dealing with clustered data, and is seemingly very popular in disciplines trained with a biostatistics perspective, but perhaps not too commonly used elsewhere. Models using this approach are sometimes called <span class="emph">marginal models</span>, and can be seen as follows, where the target <span class="math inline">\(y\)</span> is multivariate normal with mean vector <span class="math inline">\(X\beta\)</span> and covariance matrix <span class="math inline">\(\Sigma\)</span>, which is typically block diagonal as we created at the beginning<a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a>.</p>
+<p>A <span class="emph">generalized estimating equation</span> is an <em>estimation procedure</em><a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a> for dealing with clustered data, and is seemingly very popular in disciplines trained with a biostatistics perspective, but perhaps not too commonly used elsewhere. Models using this approach are sometimes called <span class="emph">marginal models</span>, and can be seen as follows, where the target <span class="math inline">\(y\)</span> is multivariate normal with mean vector <span class="math inline">\(X\beta\)</span> and covariance matrix <span class="math inline">\(\Sigma\)</span>, which is typically block diagonal as we created at the beginning<a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a>.</p>
 <p><span class="math display">\[ y \sim \mathcal{N}(X\beta,  \Sigma) \]</span></p>
 <p>Here the focus is on the ‘population average’ effects, akin to ‘fixed’ effects in the RE model, and in some circumstances they are identical. In addition, one specifies the type of covariance structure thought to underlie the data. Among the more common are:</p>
 <ul>
@@ -243,7 +243,7 @@ $(document).ready(function() {
 <li><em>exchangeable</em>: same correlation everywhere (aka ‘compound symmetry’ or ‘spherical’)</li>
 <li><em>unstructured</em>: all possible correlations are estimated as parameters</li>
 </ul>
-<p>And there are many others. The GEE approach is identical to RE intercept-only model approach if one conducts a linear Gaussian model, as in this case. In addition, these correlation structures are often available to mixed models tools, so this extension alone should not be a reason<a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a> to use the GEE approach.</p>
+<p>And there are many others. The GEE approach is identical to RE intercept-only model approach if one conducts a linear Gaussian model, as in this case. In addition, these correlation structures are often available to mixed models tools, so this extension alone should not be a reason<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a> to use the GEE approach.</p>
 <p>We’ll use the <span class="pack">geepack</span> package in order to conduct the gee approach to the model. We’ll specify an autoregressive correlation structure as we did with the mixed model, and as the data was in fact designed with.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(geepack)
 
@@ -473,14 +473,14 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 <pre><code>[1] 1.306739</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">intsd<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>timesd<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>sigmasq              <span class="co"># &#39;truth&#39;</span></code></pre></div>
 <pre><code>[1] 1.3125</code></pre>
-<p>GEE models are generally robust to misspecification of the covariance structure. They are rarely implemented for more than simple clustering but some tools allow for it<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a>.</p>
-<p>Where GEE differ from random effects models in interpretation regards non-Gaussian models. Consider a gender effect for a binary outcome where individuals are nested within families. In this case we could use a standard logistic regression, but would want to take the clustering into account. The gender effect for GEE is comparing hypothetical males in many different families to hypothetical females in many different families (controlling for other covariates). In the mixed model with a random effect for family, you are comparing males in one family to females in the same family (again controlling for other factors). The latter odds ratio will typically be larger because there is less fluctuation due to family-to-family differences<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a>. However, this isn’t a <em>larger</em> effect, just a different one.</p>
+<p>GEE models are generally robust to misspecification of the covariance structure. They are rarely implemented for more than simple clustering but some tools allow for it<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a>.</p>
+<p>Where GEE differ from random effects models in interpretation regards non-Gaussian models. Consider a gender effect for a binary outcome where individuals are nested within families. In this case we could use a standard logistic regression, but would want to take the clustering into account. The gender effect for GEE is comparing hypothetical males in many different families to hypothetical females in many different families (controlling for other covariates). In the mixed model with a random effect for family, you are comparing males in one family to females in the same family (again controlling for other factors). The latter odds ratio will typically be larger because there is less fluctuation due to family-to-family differences<a href="#fn17" class="footnoteRef" id="fnref17"><sup>17</sup></a>. However, this isn’t a <em>larger</em> effect, just a different one.</p>
 <div id="pros-6" class="section level2">
 <h2>Pros</h2>
 <ul>
 <li>Easy modeling of different correlation structures</li>
 <li>Focus on population level effects</li>
-<li>Extends the cluster robust approach to GLM setting and other correlation structures<a href="#fn17" class="footnoteRef" id="fnref17"><sup>17</sup></a></li>
+<li>Extends the cluster robust approach to GLM setting and other correlation structures<a href="#fn18" class="footnoteRef" id="fnref18"><sup>18</sup></a></li>
 <li>Robust to misspecification of correlation structure</li>
 <li>May be more feasible with larger data situations than mixed models</li>
 </ul>
@@ -498,13 +498,13 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 </div>
 <div class="footnotes">
 <hr />
-<ol start="12">
-<li id="fn12"><p>Not a model! We’re just doing a GLM here.<a href="generalized-estimating-equations.html#fnref12">↩</a></p></li>
-<li id="fn13"><p>The corresponding matrix formulation for the <em>conditional</em> model of the random effects approach is: <span class="math display">\[ y \sim \mathcal{N}(X\beta + Z\Gamma,  \Sigma) \]</span> where <span class="math inline">\(Z\)</span> is some subset of <span class="math inline">\(X\)</span>, and <span class="math inline">\(\Gamma\)</span> contains the random effects.<a href="generalized-estimating-equations.html#fnref13">↩</a></p></li>
-<li id="fn14"><p><span class="pack">lme4</span> is a very widely used mixed model package that does not allow the specification of a correlation structure for the residuals.<a href="generalized-estimating-equations.html#fnref14">↩</a></p></li>
-<li id="fn15"><p>CSCAR director and University of Michigan statistics faculty <a href="https://github.com/kshedden">Kerby Shedden</a> has worked on a Python implementation for nested structures as part of the <a href="http://statsmodels.sourceforge.net/devel/gee.html">statsmodels module</a>.<a href="generalized-estimating-equations.html#fnref15">↩</a></p></li>
-<li id="fn16"><p>This is a paraphrase of a response by Kerby Shedden to a question on the CSCAR help list that I thought was succinct and easy to understand. He continues: “I don’t have a strong opinion about this. It is almost always good to control for observed variables to reduce heterogeneity and get a sharper analysis. But it’s less clear to me that you should control for things that are unattributable (e.g. family effects of unknown cause), even if it is technically possible to do so. It comes down to this: do you want to measure my risk (for being male) by comparing me to my sister (or an imaginary sister who is identical to me in all observables except gender)…or do you want to compare me to an unrelated female, also identical to me in terms of all observables?”<a href="generalized-estimating-equations.html#fnref16">↩</a></p></li>
-<li id="fn17"><p>Recall the note at the end of the <a href="cluster-robust-variances.html#cluster-robust-variances">cluster robust SE chapter</a>.<a href="generalized-estimating-equations.html#fnref17">↩</a></p></li>
+<ol start="13">
+<li id="fn13"><p>Not a model! We’re just doing a GLM here.<a href="generalized-estimating-equations.html#fnref13">↩</a></p></li>
+<li id="fn14"><p>The corresponding matrix formulation for the <em>conditional</em> model of the random effects approach is: <span class="math display">\[ y \sim \mathcal{N}(X\beta + Z\Gamma,  \Sigma) \]</span> where <span class="math inline">\(Z\)</span> is some subset of <span class="math inline">\(X\)</span>, and <span class="math inline">\(\Gamma\)</span> contains the random effects.<a href="generalized-estimating-equations.html#fnref14">↩</a></p></li>
+<li id="fn15"><p><span class="pack">lme4</span> is a very widely used mixed model package that does not allow the specification of a correlation structure for the residuals.<a href="generalized-estimating-equations.html#fnref15">↩</a></p></li>
+<li id="fn16"><p>CSCAR director and University of Michigan statistics faculty <a href="https://github.com/kshedden">Kerby Shedden</a> has worked on a Python implementation for nested structures as part of the <a href="http://statsmodels.sourceforge.net/devel/gee.html">statsmodels module</a>.<a href="generalized-estimating-equations.html#fnref16">↩</a></p></li>
+<li id="fn17"><p>This is a paraphrase of a response by Kerby Shedden to a question on the CSCAR help list that I thought was succinct and easy to understand. He continues: “I don’t have a strong opinion about this. It is almost always good to control for observed variables to reduce heterogeneity and get a sharper analysis. But it’s less clear to me that you should control for things that are unattributable (e.g. family effects of unknown cause), even if it is technically possible to do so. It comes down to this: do you want to measure my risk (for being male) by comparing me to my sister (or an imaginary sister who is identical to me in all observables except gender)…or do you want to compare me to an unrelated female, also identical to me in terms of all observables?”<a href="generalized-estimating-equations.html#fnref17">↩</a></p></li>
+<li id="fn18"><p>Recall the note at the end of the <a href="cluster-robust-variances.html#cluster-robust-variances">cluster robust SE chapter</a>.<a href="generalized-estimating-equations.html#fnref18">↩</a></p></li>
 </ol>
 </div>
             </section>

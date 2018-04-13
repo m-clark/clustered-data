@@ -24,7 +24,7 @@
 
 
 
-<meta name="date" content="2018-04-01">
+<meta name="date" content="2018-04-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -234,7 +234,7 @@ $(document).ready(function() {
 </script>
 <div id="mixed-models" class="section level1">
 <h1>Mixed Models</h1>
-<p><span class="emph">Mixed models</span>, also known by other names, explicitly model the random effects due to the clustering in the data. They are extremely flexible approaches that can handle crossed and nested clustering structures, as well as different residual dependency structures. In addition, they can fit within other modeling approaches that can be expressed essentially identically<a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a>, allowing for even more modeling considerations. They also have a very natural extension to Bayesian estimation, and, as we will see later, an alternative ‘latent variable’ interpretation. In short, there is a lot going on here.</p>
+<p><span class="emph">Mixed models</span>, also known by other names, explicitly model the random effects due to the clustering in the data. They are extremely flexible approaches that can handle crossed and nested clustering structures, as well as different residual dependency structures. In addition, they can fit within other modeling approaches that can be expressed essentially identically<a href="#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a>, allowing for even more modeling considerations. They also have a very natural extension to Bayesian estimation, and, as we will see later, an alternative ‘latent variable’ interpretation. In short, there is a lot going on here.</p>
 <p>For observations <span class="math inline">\(i\)</span> nested within cluster <span class="math inline">\(c\)</span>, we can depict the model in a couple of different ways, but the following is fairly straightforward and in keeping with how the data was created. The main idea is that we have cluster specific coefficients for the intercept and time.</p>
 <p><span class="math display">\[ y_{ic} = \beta_{0c} + \beta_{1c} * \mathrm{time}_{ic} + \epsilon_{ic} \]</span> <span class="math display">\[\beta_{0c} = \beta_0 + \beta_2 * \mathrm{Treat_{c}} + \gamma_c\]</span> <span class="math display">\[\beta_{1c} = \beta_1 + \nu_c\]</span> <span class="math display">\[\gamma_c\sim \mathcal{N}(0, \tau^2)\]</span> <span class="math display">\[\nu_c\sim \mathcal{N}(0, \eta^2)\]</span> <span class="math display">\[\epsilon_ic \sim N(0, \sigma^2)\]</span> Putting the model together we get:</p>
 <p><span class="math display">\[ y_{ic} = (\beta_0 + \gamma_c) + (\beta_1 + \nu_c) * \mathrm{time}_{ic} + \beta_2 * \mathrm{Treat_{c}} + \epsilon_{ic} \]</span> So what we end up with conceptually is the standard linear model, but with cluster specific deviations/effects. These effects are <em>random</em> in that they are drawn from a specific distribution, in this case normal, with mean 0 and some standard deviation, which is estimated as part of the model. Recall that we specified these values at the <a href="introduction.html#preliminaries">beginning</a> though in terms of standard deviation. In addition, the cluster level effect of treatment enters the model as would any other covariate.</p>
@@ -414,8 +414,8 @@ mixed_mod =<span class="st"> </span><span class="kw">lme</span>(y <span class="o
 </div>
 <div class="footnotes">
 <hr />
-<ol start="11">
-<li id="fn11"><p>Such as spatial random effects, additive models, network effects etc. See the Fahrmeier et al. reference.<a href="mixed-models.html#fnref11">↩</a></p></li>
+<ol start="12">
+<li id="fn12"><p>Such as spatial random effects, additive models, network effects etc. See the Fahrmeier et al. reference.<a href="mixed-models.html#fnref12">↩</a></p></li>
 </ol>
 </div>
             </section>

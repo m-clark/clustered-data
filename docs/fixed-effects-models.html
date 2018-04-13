@@ -24,7 +24,7 @@
 
 
 
-<meta name="date" content="2018-04-01">
+<meta name="date" content="2018-04-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -237,7 +237,7 @@ $(document).ready(function() {
 <p><span class="emph">Fixed Effects</span> (FE) models are a terribly named approach to dealing with clustered data, but in the simplest case, serve as a contrast to the random effects (RE) approach in which there are only random intercepts<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>. Despite the nomenclature, there is mainly one key difference between these models and the ‘mixed’ models we discuss. Both allow a (random) cluster-specific effect to be added to model, but the FE approach allows that effect to correlate with the predictors, while the RE does not (by default). In practice however, this means that they may end up being quite different conceptual models as well. As with cluster robust standard errors, economists, and again those trained in that fashion, have historically preferred these models. In my experience they are rarely used in other disciplines.</p>
 <p>First, let us understand this cluster-specific effect. In the standard regression setting we have a basic intercept, while here, each cluster will provide a nudge above or below that overall effect. Consider the following model (ignoring treatment for now):</p>
 <p><span class="math display">\[ y  = \textrm{Int} + \textrm{ClusterEffect} + b*\mathrm{time} + \epsilon  \]</span></p>
-<p>The cluster effect is different from one cluster to the next, but constant for a given cluster. One way we could perform such a model is just to include <code>id</code> as a predictor, thereby getting a unique estimate for each cluster added to the model. In other words, we can also see the situation as if one had simply created a dummy variable for <code>id</code> and conducted a standard linear model. This is in fact how one can think of the FE model, though where the cluster-specific effects are assumed constants to be estimated, and in the past these models were sometimes referred to as least squares dummy variable (LSDV) regression models<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>. If you actually run the LSDV model, the statistical results for time will be identical.</p>
+<p>The cluster effect is different from one cluster to the next, but constant for a given cluster. One way we could perform such a model is just to include <code>id</code> as a predictor, thereby getting a unique estimate for each cluster added to the model. In other words, we can also see the situation as if one had simply created a dummy variable for <code>id</code> and conducted a standard linear model. This is in fact how one can think of the FE model, though where the cluster-specific effects are assumed constants to be estimated, and in the past these models were sometimes referred to as least squares dummy variable (LSDV) regression models<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>. If you actually run the LSDV model, the statistical results for time will be identical to the fixed effects model.</p>
 <p>Why would we be worried about the potential correlation between the cluster-specific effects and the model covariates? In typical social science and economic data it’s probably likely that unspecified cluster level effects might have some correlation with the individual level covariates. This leads to inconsistent estimates in the RE approach, and as such the FE might be used instead.</p>
 <p>In the following we use the <span class="pack">plm</span> package to estimate the FE model. I highly recommend reading the excellent <a href="https://cran.r-project.org/web/packages/plm/vignettes/plm.pdf">vignette</a> for this package if you are one of those econometrically trained folk new to R or the mixed model approach, or conversely, other folk wishing to understand the econometric perspective.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">FE_mod =<span class="st"> </span><span class="kw">plm</span>(y <span class="op">~</span><span class="st"> </span><span class="kw">as.numeric</span>(time) <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">index=</span><span class="st">&#39;id&#39;</span>, <span class="dt">model=</span><span class="st">&#39;within&#39;</span>)
@@ -267,7 +267,7 @@ Adj. R-Squared: 0.26627
 F-statistic: 6128.62 on 1 and 7499 DF, p-value: &lt; 2.22e-16</code></pre>
 <p>Note how there is no intercept or treatment effect. In this circumstance of a random intercept model, the FE model can also be seen as a ‘demeaning’ approach, were the model within a cluster is:</p>
 <p><span class="math display">\[y_i-\bar{y_i} = (X_i-\bar{X_i})\beta + (\epsilon-\bar{\epsilon_i})\]</span></p>
-<p>In other words, we subtract the mean from each covariate and response and run the model that way (this is also known as the within transformation). Note the following produces the same result, although the standard error for time is off<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a>.</p>
+<p>In other words, we subtract the mean from each covariate and response and run the model that way (this is also known as the within transformation, but again, mostly to those from the econometrics world; it is more often referred to as ‘centering’). Note the following produces the same result, although the standard error for time is off<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a>.</p>
 <div class="fold s">
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">group_by</span>(id) <span class="op">%&gt;%</span><span class="st"> </span>
@@ -307,12 +307,12 @@ F-statistic:  8171 on 1 and 9998 DF,  p-value: &lt; 2.2e-16</code></pre>
 <ul>
 <li>Ignores cluster level covariates or anything cluster constant (i.e. will almost always lose data).</li>
 <li>Doesn’t easily extend to more complex clustering structures.</li>
-<li>Less efficient that RE if RE assumption holds</li>
-<li>Technically one can do random slopes also (mentioned in passing in Greene), but nothing out there does.</li>
+<li>Less efficient than RE if RE assumption holds</li>
+<li>Technically one can do something akin to random slopes also<a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a> (mentioned in passing in Greene), but nothing out there does.</li>
 <li>Awkward (my opinion) extension to GLM setting for binary and counts</li>
 <li>More will be pointed out with the mixed models</li>
 </ul>
-<p>Gist: If your goal is statistical consistency above all other considerations, this approach is for you. However, given that with mixed models we can potentially overcome the primary issue that the FE model addresses (RE correlated with covariates<a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a>), this seems a difficult modeling approach to justify.</p>
+<p>Gist: If your goal is statistical consistency above all other considerations, this approach is for you. However, given that with mixed models we can potentially overcome the primary issue that the FE model addresses (RE correlated with covariates<a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a>), this seems a difficult modeling approach to justify. For more see Bell et al. (2016). Fixed and Random effects: making an informed choice.</p>
 
 </div>
 </div>
@@ -324,7 +324,8 @@ F-statistic:  8171 on 1 and 9998 DF,  p-value: &lt; 2.2e-16</code></pre>
 <li id="fn7"><p>This is due to the fact that estimation of the group means was not taken into account.<a href="fixed-effects-models.html#fnref7">↩</a></p></li>
 <li id="fn8"><p>Note that you could still get the interaction of time x treatment, which you’d definitely want to examine in the experimental longitudinal setting. In other circumstances and with numerous covariates, this may become unwieldy, and then there are the issues of when the interaction is not significant, you have no main effect to fall back on, and you’re also testing an interaction without all the component main effects.<a href="fixed-effects-models.html#fnref8">↩</a></p></li>
 <li id="fn9"><p>Still applies here, i.e. we can still use cluster robust standard errors.<a href="fixed-effects-models.html#fnref9">↩</a></p></li>
-<li id="fn10"><p>One can use aggregated values of the potentially offending covariates as cluster level covariates. For example, if we had people clustered within political district, we could use average income as a district-level covariate. Such models are sometimes referred to as hybrids, incorporating both the FE and RE approaches, but this is unwarranted. All three are simply random effects models of different kinds.<a href="fixed-effects-models.html#fnref10">↩</a></p></li>
+<li id="fn10"><p>And you can defeat the purpose of the FE model by include a covariate by group interaction. However, there would also be no regularizing effect on all the coefficients produced by such a model, unlike the RE model.<a href="fixed-effects-models.html#fnref10">↩</a></p></li>
+<li id="fn11"><p>One can use aggregated values of the potentially offending covariates as cluster level covariates. For example, if we had people clustered within political district, we could use average income as a district-level covariate. Such models are sometimes referred to as hybrids, incorporating both the FE and RE approaches, but this is unwarranted. All three are simply random effects models of different kinds.<a href="fixed-effects-models.html#fnref11">↩</a></p></li>
 </ol>
 </div>
             </section>
