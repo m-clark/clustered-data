@@ -24,7 +24,7 @@
 
 
 
-<meta name="date" content="2018-04-12">
+<meta name="date" content="2018-07-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -60,41 +60,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/standard_html.css" type="text/css" />
@@ -234,7 +262,7 @@ $(document).ready(function() {
 </script>
 <div id="generalized-estimating-equations" class="section level1">
 <h1>Generalized Estimating Equations</h1>
-<p>A <span class="emph">generalized estimating equation</span> is an <em>estimation procedure</em><a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a> for dealing with clustered data, and is seemingly very popular in disciplines trained with a biostatistics perspective, but perhaps not too commonly used elsewhere. Models using this approach are sometimes called <span class="emph">marginal models</span>, and can be seen as follows, where the target <span class="math inline">\(y\)</span> is multivariate normal with mean vector <span class="math inline">\(X\beta\)</span> and covariance matrix <span class="math inline">\(\Sigma\)</span>, which is typically block diagonal as we created at the beginning<a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a>.</p>
+<p>A <span class="emph">generalized estimating equation</span> is an <em>estimation procedure</em><a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> for dealing with clustered data, and is seemingly very popular in disciplines trained with a biostatistics perspective, but perhaps not too commonly used elsewhere. Models using this approach are sometimes called <span class="emph">marginal models</span>, and can be seen as follows, where the target <span class="math inline">\(y\)</span> is multivariate normal with mean vector <span class="math inline">\(X\beta\)</span> and covariance matrix <span class="math inline">\(\Sigma\)</span>, which is typically block diagonal as we created at the beginning<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>.</p>
 <p><span class="math display">\[ y \sim \mathcal{N}(X\beta,  \Sigma) \]</span></p>
 <p>Here the focus is on the ‘population average’ effects, akin to ‘fixed’ effects in the RE model, and in some circumstances they are identical. In addition, one specifies the type of covariance structure thought to underlie the data. Among the more common are:</p>
 <ul>
@@ -243,18 +271,18 @@ $(document).ready(function() {
 <li><em>exchangeable</em>: same correlation everywhere (aka ‘compound symmetry’ or ‘spherical’)</li>
 <li><em>unstructured</em>: all possible correlations are estimated as parameters</li>
 </ul>
-<p>And there are many others. The GEE approach is identical to RE intercept-only model approach if one conducts a linear Gaussian model, as in this case. In addition, these correlation structures are often available to mixed models tools, so this extension alone should not be a reason<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a> to use the GEE approach.</p>
+<p>And there are many others. The GEE approach is identical to RE intercept-only model approach if one conducts a linear Gaussian model, as in this case. In addition, these correlation structures are often available to mixed models tools, so this extension alone should not be a reason<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> to use the GEE approach.</p>
 <p>We’ll use the <span class="pack">geepack</span> package in order to conduct the gee approach to the model. We’ll specify an autoregressive correlation structure as we did with the mixed model, and as the data was in fact designed with.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(geepack)
-
-gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="op">~</span><span class="st"> </span>time <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">corstr=</span><span class="st">&#39;ar1&#39;</span>, <span class="dt">id=</span>id, <span class="dt">waves=</span>time)</code></pre></div>
-<table style="width:90%;">
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">library</span>(geepack)</a>
+<a class="sourceLine" id="cb32-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb32-3" data-line-number="3">gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="op">~</span><span class="st"> </span>time <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">corstr=</span><span class="st">&#39;ar1&#39;</span>, <span class="dt">id=</span>id, <span class="dt">waves=</span>time)</a></code></pre></div>
+<table style="width:92%;">
 <colgroup>
 <col width="34%" />
 <col width="15%" />
 <col width="13%" />
 <col width="12%" />
-<col width="13%" />
+<col width="15%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -289,9 +317,9 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 </tr>
 </tbody>
 </table>
-<table style="width:26%;">
+<table style="width:28%;">
 <colgroup>
-<col width="26%" />
+<col width="27%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -327,8 +355,8 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 </table>
 <p>We should be getting used to the coefficient estimates for the population-average, a.k.a. fixed effects, by now. We also obtain an estimate for the residual correlation, here noted as <em>alpha</em>.</p>
 <p>Note the similarities here compared with the mixed model where there is only a random intercept. A couple of changes are made to keep things as similar as possible.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixed_mod_ri_only =<span class="st"> </span><span class="kw">lme</span>(y <span class="op">~</span><span class="st"> </span>time <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">|</span>id, <span class="dt">cor=</span><span class="kw">corAR1</span>(<span class="dt">form=</span><span class="op">~</span>time), 
-                        <span class="dt">control=</span><span class="kw">lmeControl</span>(<span class="dt">opt=</span><span class="st">&#39;optim&#39;</span>), <span class="dt">method=</span><span class="st">&#39;ML&#39;</span>)  <span class="co"># changed opt bc nlminb had issues</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1">mixed_mod_ri_only =<span class="st"> </span><span class="kw">lme</span>(y <span class="op">~</span><span class="st"> </span>time <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">|</span>id, <span class="dt">cor=</span><span class="kw">corAR1</span>(<span class="dt">form=</span><span class="op">~</span>time), </a>
+<a class="sourceLine" id="cb33-2" data-line-number="2">                        <span class="dt">control=</span><span class="kw">lmeControl</span>(<span class="dt">opt=</span><span class="st">&#39;optim&#39;</span>), <span class="dt">method=</span><span class="st">&#39;ML&#39;</span>)  <span class="co"># changed opt bc nlminb had issues</span></a></code></pre></div>
 <table>
 <caption>Fixed effects: y ~ time + treatment</caption>
 <colgroup>
@@ -404,13 +432,13 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 </tr>
 </tbody>
 </table>
-<table style="width:83%;">
+<table style="width:85%;">
 <caption>Linear mixed-effects model fit by maximum likelihood : y ~ time + treatment</caption>
 <colgroup>
 <col width="12%" />
 <col width="20%" />
 <col width="12%" />
-<col width="37%" />
+<col width="38%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -429,10 +457,10 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 </tr>
 </tbody>
 </table>
-<table style="width:26%;">
+<table style="width:31%;">
 <colgroup>
 <col width="15%" />
-<col width="11%" />
+<col width="15%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -451,9 +479,9 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 </tr>
 </tbody>
 </table>
-<table style="width:8%;">
+<table style="width:10%;">
 <colgroup>
-<col width="8%" />
+<col width="9%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -467,20 +495,20 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 </tbody>
 </table>
 <p>The population average effects are identical (though the <span class="func">geeglm</span> function automatically does cluster robust standard errors). The estimated correlations for both are similar, and a bit high. There is essentially no cluster variance in the mixed model, and both estimated residual variances are similar, and similar to the standard linear model we started with. This makes sense as the variance is equal to the residual variance + the intercept variance + slope variance.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(lm_mod)<span class="op">$</span>sigma<span class="op">^</span><span class="dv">2</span>                   <span class="co"># similar to gee and random intercept only</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="kw">summary</span>(lm_mod)<span class="op">$</span>sigma<span class="op">^</span><span class="dv">2</span>                   <span class="co"># similar to gee and random intercept only</span></a></code></pre></div>
 <pre><code>[1] 1.479611</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">as.numeric</span>(<span class="kw">VarCorr</span>(mixed_mod)[,<span class="dv">1</span>]))   <span class="co"># model that incorporates all sources of variance</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="kw">sum</span>(<span class="kw">as.numeric</span>(<span class="kw">VarCorr</span>(mixed_mod)[,<span class="dv">1</span>]))   <span class="co"># model that incorporates all sources of variance</span></a></code></pre></div>
 <pre><code>[1] 1.306739</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">intsd<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>timesd<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>sigmasq              <span class="co"># &#39;truth&#39;</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1">intsd<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>timesd<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>sigmasq              <span class="co"># &#39;truth&#39;</span></a></code></pre></div>
 <pre><code>[1] 1.3125</code></pre>
-<p>GEE models are generally robust to misspecification of the covariance structure. They are rarely implemented for more than simple clustering but some tools allow for it<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a>.</p>
-<p>Where GEE differ from random effects models in interpretation regards non-Gaussian models. Consider a gender effect for a binary outcome where individuals are nested within families. In this case we could use a standard logistic regression, but would want to take the clustering into account. The gender effect for GEE is comparing hypothetical males in many different families to hypothetical females in many different families (controlling for other covariates). In the mixed model with a random effect for family, you are comparing males in one family to females in the same family (again controlling for other factors). The latter odds ratio will typically be larger because there is less fluctuation due to family-to-family differences<a href="#fn17" class="footnoteRef" id="fnref17"><sup>17</sup></a>. However, this isn’t a <em>larger</em> effect, just a different one.</p>
+<p>GEE models are generally robust to misspecification of the covariance structure. They are rarely implemented for more than simple clustering but some tools allow for it<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>.</p>
+<p>Where GEE differ from random effects models in interpretation regards non-Gaussian models. Consider a gender effect for a binary outcome where individuals are nested within families. In this case we could use a standard logistic regression, but would want to take the clustering into account. The gender effect for GEE is comparing hypothetical males in many different families to hypothetical females in many different families (controlling for other covariates). In the mixed model with a random effect for family, you are comparing males in one family to females in the same family (again controlling for other factors). The latter odds ratio will typically be larger because there is less fluctuation due to family-to-family differences<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a>. However, this isn’t a <em>larger</em> effect, just a different one.</p>
 <div id="pros-6" class="section level2">
 <h2>Pros</h2>
 <ul>
 <li>Easy modeling of different correlation structures</li>
 <li>Focus on population level effects</li>
-<li>Extends the cluster robust approach to GLM setting and other correlation structures<a href="#fn18" class="footnoteRef" id="fnref18"><sup>18</sup></a></li>
+<li>Extends the cluster robust approach to GLM setting and other correlation structures<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></li>
 <li>Robust to misspecification of correlation structure</li>
 <li>May be more feasible with larger data situations than mixed models</li>
 </ul>
@@ -499,12 +527,14 @@ gee_mod =<span class="st"> </span><span class="kw">geeglm</span>(y <span class="
 <div class="footnotes">
 <hr />
 <ol start="13">
-<li id="fn13"><p>Not a model! We’re just doing a GLM here.<a href="generalized-estimating-equations.html#fnref13">↩</a></p></li>
-<li id="fn14"><p>The corresponding matrix formulation for the <em>conditional</em> model of the random effects approach is: <span class="math display">\[ y \sim \mathcal{N}(X\beta + Z\Gamma,  \Sigma) \]</span> where <span class="math inline">\(Z\)</span> is some subset of <span class="math inline">\(X\)</span>, and <span class="math inline">\(\Gamma\)</span> contains the random effects.<a href="generalized-estimating-equations.html#fnref14">↩</a></p></li>
-<li id="fn15"><p><span class="pack">lme4</span> is a very widely used mixed model package that does not allow the specification of a correlation structure for the residuals.<a href="generalized-estimating-equations.html#fnref15">↩</a></p></li>
-<li id="fn16"><p>CSCAR director and University of Michigan statistics faculty <a href="https://github.com/kshedden">Kerby Shedden</a> has worked on a Python implementation for nested structures as part of the <a href="http://statsmodels.sourceforge.net/devel/gee.html">statsmodels module</a>.<a href="generalized-estimating-equations.html#fnref16">↩</a></p></li>
-<li id="fn17"><p>This is a paraphrase of a response by Kerby Shedden to a question on the CSCAR help list that I thought was succinct and easy to understand. He continues: “I don’t have a strong opinion about this. It is almost always good to control for observed variables to reduce heterogeneity and get a sharper analysis. But it’s less clear to me that you should control for things that are unattributable (e.g. family effects of unknown cause), even if it is technically possible to do so. It comes down to this: do you want to measure my risk (for being male) by comparing me to my sister (or an imaginary sister who is identical to me in all observables except gender)…or do you want to compare me to an unrelated female, also identical to me in terms of all observables?”<a href="generalized-estimating-equations.html#fnref17">↩</a></p></li>
-<li id="fn18"><p>Recall the note at the end of the <a href="cluster-robust-variances.html#cluster-robust-variances">cluster robust SE chapter</a>.<a href="generalized-estimating-equations.html#fnref18">↩</a></p></li>
+<li id="fn13"><p>Not a model! We’re just doing a GLM here.<a href="generalized-estimating-equations.html#fnref13" class="footnote-back">↩</a></p></li>
+<li id="fn14"><p>The corresponding matrix formulation for the <em>conditional</em> model of the random effects approach is:
+<span class="math display">\[ y \sim \mathcal{N}(X\beta + Z\Gamma,  \Sigma) \]</span>
+where <span class="math inline">\(Z\)</span> is some subset of <span class="math inline">\(X\)</span>, and <span class="math inline">\(\Gamma\)</span> contains the random effects.<a href="generalized-estimating-equations.html#fnref14" class="footnote-back">↩</a></p></li>
+<li id="fn15"><p><span class="pack">lme4</span> is a very widely used mixed model package that does not allow the specification of a correlation structure for the residuals.<a href="generalized-estimating-equations.html#fnref15" class="footnote-back">↩</a></p></li>
+<li id="fn16"><p>CSCAR director and University of Michigan statistics faculty <a href="https://github.com/kshedden">Kerby Shedden</a> has worked on a Python implementation for nested structures as part of the <a href="http://statsmodels.sourceforge.net/devel/gee.html">statsmodels module</a>.<a href="generalized-estimating-equations.html#fnref16" class="footnote-back">↩</a></p></li>
+<li id="fn17"><p>This is a paraphrase of a response by Kerby Shedden to a question on the CSCAR help list that I thought was succinct and easy to understand. He continues: “I don’t have a strong opinion about this. It is almost always good to control for observed variables to reduce heterogeneity and get a sharper analysis. But it’s less clear to me that you should control for things that are unattributable (e.g. family effects of unknown cause), even if it is technically possible to do so. It comes down to this: do you want to measure my risk (for being male) by comparing me to my sister (or an imaginary sister who is identical to me in all observables except gender)…or do you want to compare me to an unrelated female, also identical to me in terms of all observables?”<a href="generalized-estimating-equations.html#fnref17" class="footnote-back">↩</a></p></li>
+<li id="fn18"><p>Recall the note at the end of the <a href="cluster-robust-variances.html#cluster-robust-variances">cluster robust SE chapter</a>.<a href="generalized-estimating-equations.html#fnref18" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -565,7 +595,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

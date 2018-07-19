@@ -24,7 +24,7 @@
 
 
 
-<meta name="date" content="2018-04-12">
+<meta name="date" content="2018-07-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -60,41 +60,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/standard_html.css" type="text/css" />
@@ -237,9 +265,9 @@ $(document).ready(function() {
 <p>An alternative approach to mixed models considers the random effects as <span class="emph">latent variables</span> with the outcome at each time point an indicator for the latent variable. I have details <a href="https://m-clark.github.io/docs/sem">elsewhere</a>, but I want to explore this as it is a commonly used technique in the social sciences, especially psychology. <span class="emph">Latent Growth Curve Models</span> are a special case of <span class="emph">structural equation modeling</span>, a highly flexible tool that can incorporate latent variables, indirect effects, multiple outcomes etc. Growth curve models are actually somewhat irregular SEM in the way that they are specified, but for our purposes, we only want to see how the approach works and compare it to previous methods.</p>
 <p>The first thing is that the data has to be in <em>wide</em> format, such that we have one column per time point, and thus only one row per individual. Once the data is ready we specify the model syntax. By default, the SEM approach also assumes unequal variances across time, so to make it more comparable, we fix that value to be constant. We’ll use <span class="pack">lavaan</span> to estimate the model.</p>
 <div class="fold s">
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dwide =<span class="st"> </span><span class="kw">spread</span>(d, <span class="dt">key=</span>time, <span class="dt">value=</span>y, <span class="dt">sep=</span><span class="st">&#39;_&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">treatment =</span> treatment<span class="op">==</span><span class="st">&#39;treatment&#39;</span>)  <span class="co"># otherwise converted to numeric directly as 1-2 instead of 1-0</span>
-<span class="kw">head</span>(dwide)</code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1">dwide =<span class="st"> </span><span class="kw">spread</span>(d, <span class="dt">key=</span>time, <span class="dt">value=</span>y, <span class="dt">sep=</span><span class="st">&#39;_&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb40-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">treatment =</span> treatment<span class="op">==</span><span class="st">&#39;treatment&#39;</span>)  <span class="co"># otherwise converted to numeric directly as 1-2 instead of 1-0</span></a>
+<a class="sourceLine" id="cb40-3" data-line-number="3"><span class="kw">head</span>(dwide)</a></code></pre></div>
 <pre><code>  treatment id     time_0    time_1    time_2     time_3
 1     FALSE  1  0.1760974 0.6928733 0.1920017 -0.2205356
 2     FALSE  2  1.4265781 1.6607311 1.2515623  2.9685755
@@ -249,27 +277,27 @@ $(document).ready(function() {
 6     FALSE  6  0.6079163 0.1161267 0.6956824  0.8326176</code></pre>
 </div>
 <div class="fold s">
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">growthmod_syntax =<span class="st"> &quot;</span>
-<span class="st"># model for the intercept and slope latent variables</span>
-<span class="st">  int   =~ 1*time_0 + 1*time_1 + 1*time_2 + 1*time_3</span>
-<span class="st">  slope =~ 0*time_0 + 1*time_1 + 2*time_2 + 3*time_3</span>
-
-<span class="st"># cluster-level effect</span>
-<span class="st">  int ~ treatment</span>
-
-<span class="st"># intercept-slope correlation</span>
-<span class="st">  int ~~ slope</span>
-
-<span class="st"># fix to equal variances (parameter &#39;res&#39;)</span>
-<span class="st">  time_0 ~~ res*time_0</span>
-<span class="st">  time_1 ~~ res*time_1</span>
-<span class="st">  time_2 ~~ res*time_2</span>
-<span class="st">  time_3 ~~ res*time_3</span>
-<span class="st">&quot;</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">growthmod_syntax =<span class="st"> &quot;</span></a>
+<a class="sourceLine" id="cb42-2" data-line-number="2"><span class="st"># model for the intercept and slope latent variables</span></a>
+<a class="sourceLine" id="cb42-3" data-line-number="3"><span class="st">  int   =~ 1*time_0 + 1*time_1 + 1*time_2 + 1*time_3</span></a>
+<a class="sourceLine" id="cb42-4" data-line-number="4"><span class="st">  slope =~ 0*time_0 + 1*time_1 + 2*time_2 + 3*time_3</span></a>
+<a class="sourceLine" id="cb42-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb42-6" data-line-number="6"><span class="st"># cluster-level effect</span></a>
+<a class="sourceLine" id="cb42-7" data-line-number="7"><span class="st">  int ~ treatment</span></a>
+<a class="sourceLine" id="cb42-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb42-9" data-line-number="9"><span class="st"># intercept-slope correlation</span></a>
+<a class="sourceLine" id="cb42-10" data-line-number="10"><span class="st">  int ~~ slope</span></a>
+<a class="sourceLine" id="cb42-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb42-12" data-line-number="12"><span class="st"># fix to equal variances (parameter &#39;res&#39;)</span></a>
+<a class="sourceLine" id="cb42-13" data-line-number="13"><span class="st">  time_0 ~~ res*time_0</span></a>
+<a class="sourceLine" id="cb42-14" data-line-number="14"><span class="st">  time_1 ~~ res*time_1</span></a>
+<a class="sourceLine" id="cb42-15" data-line-number="15"><span class="st">  time_2 ~~ res*time_2</span></a>
+<a class="sourceLine" id="cb42-16" data-line-number="16"><span class="st">  time_3 ~~ res*time_3</span></a>
+<a class="sourceLine" id="cb42-17" data-line-number="17"><span class="st">&quot;</span></a></code></pre></div>
 </div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lavaan)
-growth_mod =<span class="st"> </span><span class="kw">growth</span>(growthmod_syntax, <span class="dt">data=</span>dwide)
-<span class="kw">summary</span>(growth_mod, <span class="dt">standardized=</span>T)</code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1"><span class="kw">library</span>(lavaan)</a>
+<a class="sourceLine" id="cb43-2" data-line-number="2">growth_mod =<span class="st"> </span><span class="kw">growth</span>(growthmod_syntax, <span class="dt">data=</span>dwide)</a>
+<a class="sourceLine" id="cb43-3" data-line-number="3"><span class="kw">summary</span>(growth_mod, <span class="dt">standardized=</span>T)</a></code></pre></div>
 <pre><code>lavaan (0.5-23.1097) converged normally after  27 iterations
 
   Number of observations                          2500
@@ -324,9 +352,9 @@ Variances:
    .time_3   (res)    0.269    0.005   50.000    0.000    0.269    0.135
    .int               1.052    0.035   29.817    0.000    0.957    0.957
     slope             0.155    0.006   25.828    0.000    1.000    1.000</code></pre>
-<p>The <code>Intercepts:</code> section of the output shows what would be the fixed effects in the mixed model, and in this case, they are in fact ‘intercepts’ in this latent variable approach, so that is why they are named as such. The Regression of <code>int</code> on treatment depicts the treatment effect, and will make more sense to those who come to mixed models from the <span class="emph">multilevel modeling</span> literature. If you go back to the model depiction for the mixed model, this model more explicitly denotes <span class="math inline">\(\beta_{0c} = \beta_0 + \beta_2*\textrm{Treatment} + \gamma_c\)</span>. The <code>res</code> parameter is the arbitray name I’ve given for the residual variance, and is roughly equivalent to the square of the residual standard deviation in the mixed model output. The above model does not allow for correlated residuals, though this is possible<a href="#fn19" class="footnoteRef" id="fnref19"><sup>19</sup></a>.</p>
+<p>The <code>Intercepts:</code> section of the output shows what would be the fixed effects in the mixed model, and in this case, they are in fact ‘intercepts’ in this latent variable approach, so that is why they are named as such. The Regression of <code>int</code> on treatment depicts the treatment effect, and will make more sense to those who come to mixed models from the <span class="emph">multilevel modeling</span> literature. If you go back to the model depiction for the mixed model, this model more explicitly denotes <span class="math inline">\(\beta_{0c} = \beta_0 + \beta_2*\textrm{Treatment} + \gamma_c\)</span>. The <code>res</code> parameter is the arbitray name I’ve given for the residual variance, and is roughly equivalent to the square of the residual standard deviation in the mixed model output. The above model does not allow for correlated residuals, though this is possible<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>.</p>
 <p>The primary point here is not to precisely reproduce the correct model but to show the identity between the mixed model and the latent growth curve approach. Proper specification will lead to identical results between latent growth curve and mixed models. The following creates a mixed model that is the equivalent.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixed_mod_nocorr =<span class="st"> </span><span class="kw">lme</span>(y <span class="op">~</span><span class="st"> </span>time <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">random=</span><span class="op">~</span><span class="dv">1</span><span class="op">+</span>time<span class="op">|</span>id, <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" data-line-number="1">mixed_mod_nocorr =<span class="st"> </span><span class="kw">lme</span>(y <span class="op">~</span><span class="st"> </span>time <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">random=</span><span class="op">~</span><span class="dv">1</span><span class="op">+</span>time<span class="op">|</span>id, <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>)</a></code></pre></div>
 <table>
 <caption>Fixed effects: y ~ time + treatment</caption>
 <colgroup>
@@ -374,14 +402,14 @@ Variances:
 </tr>
 </tbody>
 </table>
-<table style="width:49%;">
+<table style="width:50%;">
 <caption>Standardized Within-Group Residuals</caption>
 <colgroup>
 <col width="11%" />
 <col width="11%" />
 <col width="9%" />
 <col width="8%" />
-<col width="8%" />
+<col width="9%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -402,13 +430,13 @@ Variances:
 </tr>
 </tbody>
 </table>
-<table style="width:83%;">
+<table style="width:85%;">
 <caption>Linear mixed-effects model fit by maximum likelihood : y ~ time + treatment</caption>
 <colgroup>
 <col width="12%" />
 <col width="20%" />
 <col width="12%" />
-<col width="37%" />
+<col width="38%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -427,10 +455,10 @@ Variances:
 </tr>
 </tbody>
 </table>
-<table style="width:26%;">
+<table style="width:31%;">
 <colgroup>
 <col width="15%" />
-<col width="11%" />
+<col width="15%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -467,20 +495,20 @@ Variances:
 <li>Tedious to specify even the simplest of models</li>
 <li>Very tedious to specify even common extensions (e.g. time-varying covariates)</li>
 <li>Even worse to get into correlated residuals</li>
-<li>More complex cluster structure is not dealt with well (if at all)<a href="#fn20" class="footnoteRef" id="fnref20"><sup>20</sup></a></li>
+<li>More complex cluster structure is not dealt with well (if at all)<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></li>
 <li>Assumes balanced time points</li>
 <li>Doesn’t deal with many time points well (if also time-varying covariates especially)</li>
 </ul>
-<p>Gist: Growth curve models are very flexible, but they are also problematic simply because they are from the SEM world, which is one where models are notoriously misapplied. Furthermore, there are no common uses of growth curve models that would not be more easily implemented in one of several R packages<a href="#fn21" class="footnoteRef" id="fnref21"><sup>21</sup></a> and various other languages and statistical programs. While I find the latent variable interpretation very much intriguing, the latent variable approach is not something I’d normally consider for this setting.</p>
+<p>Gist: Growth curve models are very flexible, but they are also problematic simply because they are from the SEM world, which is one where models are notoriously misapplied. Furthermore, there are no common uses of growth curve models that would not be more easily implemented in one of several R packages<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> and various other languages and statistical programs. While I find the latent variable interpretation very much intriguing, the latent variable approach is not something I’d normally consider for this setting.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="19">
-<li id="fn19"><p>See my LGC chapter in this <a href="https://m-clark.github.io/docs/sem">SEM document</a>. Once you see it there you’ll know why I did not do so here.<a href="latent-growth-curve.html#fnref19">↩</a></p></li>
-<li id="fn20"><p>MPlus has <a href="https://www.statmodel.com/download/handouts/MuthenV7Part3.pdf">recently</a> incorporated the ability to handle crossed random effects (and see example 9.24 in the version 7 manual), but I have no idea how they work in realistic situations with potentially many, possibly time-varying, covariates, and it’s actually done with their multilevel approach rather than the LGC we’ve been discussing. Furthermore, it requires the Bayesian estimator, which, if you’re going that route you might as well use <span class="pack">rstan</span>, <span class="pack">rjags</span> or similar and have a lot more utility (and clarity) at your disposal. For tools like <span class="pack">lme4</span> and similar, incorporating crossed random effects are no more difficult than other situations, i.e. are 1 line of code, while you’d be debugging the MPlus output for days.<a href="latent-growth-curve.html#fnref20">↩</a></p></li>
-<li id="fn21"><p>See the <span class="pack">mediation</span> package for mediation with mixed models, <span class="pack">flexMix</span> for growth mixture models, Bayesian approaches for parallel processes etc.<a href="latent-growth-curve.html#fnref21">↩</a></p></li>
+<li id="fn19"><p>See my LGC chapter in this <a href="https://m-clark.github.io/docs/sem">SEM document</a>. Once you see it there you’ll know why I did not do so here.<a href="latent-growth-curve.html#fnref19" class="footnote-back">↩</a></p></li>
+<li id="fn20"><p>MPlus has <a href="https://www.statmodel.com/download/handouts/MuthenV7Part3.pdf">recently</a> incorporated the ability to handle crossed random effects (and see example 9.24 in the version 7 manual), but I have no idea how they work in realistic situations with potentially many, possibly time-varying, covariates, and it’s actually done with their multilevel approach rather than the LGC we’ve been discussing. Furthermore, it requires the Bayesian estimator, which, if you’re going that route you might as well use <span class="pack">rstan</span>, <span class="pack">rjags</span> or similar and have a lot more utility (and clarity) at your disposal. For tools like <span class="pack">lme4</span> and similar, incorporating crossed random effects are no more difficult than other situations, i.e. are 1 line of code, while you’d be debugging the MPlus output for days.<a href="latent-growth-curve.html#fnref20" class="footnote-back">↩</a></p></li>
+<li id="fn21"><p>See the <span class="pack">mediation</span> package for mediation with mixed models, <span class="pack">flexMix</span> for growth mixture models, Bayesian approaches for parallel processes etc.<a href="latent-growth-curve.html#fnref21" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -541,7 +569,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

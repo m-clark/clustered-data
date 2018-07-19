@@ -223,3 +223,8 @@ i {
     background-color: #990024;
     color: #eaf5fb;
 }
+
+/* override pygments setting code to a tag */
+.book .book-body .page-wrapper .page-inner section.normal pre code a {
+  color: #585858;
+}

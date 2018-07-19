@@ -24,7 +24,7 @@
 
 
 
-<meta name="date" content="2018-04-12">
+<meta name="date" content="2018-07-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -60,41 +60,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/standard_html.css" type="text/css" />
@@ -237,13 +265,13 @@ $(document).ready(function() {
 <p>Let’s revisit the results all at once. Seeing the output side-by-side may prove helpful in comparing the different approaches.</p>
 <div id="fixed-effects" class="section level2">
 <h2>Fixed Effects</h2>
-<p>We’ll start with the ‘fixed effects’ or ‘population average’ estimates. It may be worth sorting by <code>Effect</code><a href="#fn22" class="footnoteRef" id="fnref22"><sup>22</sup></a>. I also include an random intercept only model for a more direct comparison between the RE and FE models.</p>
+<p>We’ll start with the ‘fixed effects’ or ‘population average’ estimates. It may be worth sorting by <code>Effect</code><a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a>. I also include an random intercept only model for a more direct comparison between the RE and FE models.</p>
 <div id="htmlwidget-9a49b73daa47cabda620" style="width:100%;height:auto;" class="datatables html-widget"></div>
 <script type="application/json" data-for="htmlwidget-9a49b73daa47cabda620">{"x":{"filter":"none","fillContainer":false,"autoHideNavigation":false,"data":[["LM","LM","LM","LM_Grouped","LM_Grouped","Cluster Robust","Cluster Robust","Cluster Robust","FE","RE_int_only","RE_int_only","RE_int_only","RE","RE","RE","GEE","GEE","GEE","Growth","Growth","Growth"],["Intercept","time","treatment","Intercept","time","Intercept","time","treatment","time","Intercept","time","treatment","Intercept","time","treatment","Intercept","time","treatment","Intercept","time","treatment"],[" 0.131"," 0.509","-0.421","-0.080"," 0.509"," 0.131"," 0.509","-0.421"," 0.509"," 0.126"," 0.507","-0.412"," 0.133"," 0.507","-0.425"," 0.127"," 0.507","-0.413"," 0.137"," 0.509","-0.434"],["0.024","0.011","0.024","0.023","0.009","0.030","0.009","0.042","0.006","0.032","0.008","0.042","0.030","0.009","0.040","0.030","0.009","0.041","0.030","0.009","0.041"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Model<\/th>\n      <th>Effect<\/th>\n      <th>Estimate<\/th>\n      <th>SE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":18,"ordering":true,"searching":false,"lengthChange":false,"caption":false,"paging":false,"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
 <p><br></p>
 <p>The main thing to note is that we would come to no grand differences in substantive conclusions, except for the Grouped and FE approach, where we can come to no conclusion about the treatment effect. Even statistically, the conclusions would be the same, so what can one conclude about these main effects?</p>
-<p>For one, we typically don’t have 10000 observations for our models, and so the differences would be more notable in that case. I invite you to rerun the simulation with a smaller sample size where n = 100 individuals instead of 2500, as well as with smaller effects (these are large), and see what you come up with. In general, with a lot of data you shouldn’t come to wildly different conclusions with different techniques<a href="#fn23" class="footnoteRef" id="fnref23"><sup>23</sup></a>.</p>
-<p>While I have yet to come across a client that actually cares what the precise value of the standard error is, many care about statistical significance. If that is of primary concern, and it shouldn’t be, then one would prefer techniques that get better estimates of the standard error<a href="#fn24" class="footnoteRef" id="fnref24"><sup>24</sup></a>. In that sense, a cluster robust approach would help, but would be better if applied in the FE/RE/GEE model settings.</p>
+<p>For one, we typically don’t have 10000 observations for our models, and so the differences would be more notable in that case. I invite you to rerun the simulation with a smaller sample size where n = 100 individuals instead of 2500, as well as with smaller effects (these are large), and see what you come up with. In general, with a lot of data you shouldn’t come to wildly different conclusions with different techniques<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>.</p>
+<p>While I have yet to come across a client that actually cares what the precise value of the standard error is, many care about statistical significance. If that is of primary concern, and it shouldn’t be, then one would prefer techniques that get better estimates of the standard error<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>. In that sense, a cluster robust approach would help, but would be better if applied in the FE/RE/GEE model settings.</p>
 </div>
 <div id="variance-estimates" class="section level2">
 <h2>Variance estimates</h2>
@@ -266,9 +294,9 @@ $(document).ready(function() {
 <div class="footnotes">
 <hr />
 <ol start="22">
-<li id="fn22"><p>For the grouped SE, I just calculated as one would the mean <code>sd/sqrt(n)</code>. I thought about using Rubin’s rules as one would for the missing value situation, but each four observation linear model has very high variance. This approach puts it in the ball park of the other estimates.<a href="summary.html#fnref22">↩</a></p></li>
-<li id="fn23"><p>“More data beats a cleverer algorithm.” ~ Pedro Domingos<a href="summary.html#fnref23">↩</a></p></li>
-<li id="fn24"><p>Note that when there are multiple sources of variance, it is difficult to know what the standard error should be. Programs like Stata and SAS make the decision for you, and provide approximate p-values (via Kenward-Roger or other approximation), while the R package <span class="pack">lme4</span> will not provide p-values. One can get decent interval estimates (e.g. via bootstrap or MCMC), but see the R wiki reference for some details on this issue.<a href="summary.html#fnref24">↩</a></p></li>
+<li id="fn22"><p>For the grouped SE, I just calculated as one would the mean <code>sd/sqrt(n)</code>. I thought about using Rubin’s rules as one would for the missing value situation, but each four observation linear model has very high variance. This approach puts it in the ball park of the other estimates.<a href="summary.html#fnref22" class="footnote-back">↩</a></p></li>
+<li id="fn23"><p>“More data beats a cleverer algorithm.” ~ Pedro Domingos<a href="summary.html#fnref23" class="footnote-back">↩</a></p></li>
+<li id="fn24"><p>Note that when there are multiple sources of variance, it is difficult to know what the standard error should be. Programs like Stata and SAS make the decision for you, and provide approximate p-values (via Kenward-Roger or other approximation), while the R package <span class="pack">lme4</span> will not provide p-values. One can get decent interval estimates (e.g. via bootstrap or MCMC), but see the R wiki reference for some details on this issue.<a href="summary.html#fnref24" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -329,7 +357,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

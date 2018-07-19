@@ -24,7 +24,7 @@
 
 
 
-<meta name="date" content="2018-04-12">
+<meta name="date" content="2018-07-18">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -60,41 +60,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/standard_html.css" type="text/css" />
@@ -234,14 +262,14 @@ $(document).ready(function() {
 </script>
 <div id="fixed-effects-models" class="section level1">
 <h1>Fixed Effects Models</h1>
-<p><span class="emph">Fixed Effects</span> (FE) models are a terribly named approach to dealing with clustered data, but in the simplest case, serve as a contrast to the random effects (RE) approach in which there are only random intercepts<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>. Despite the nomenclature, there is mainly one key difference between these models and the ‘mixed’ models we discuss. Both allow a (random) cluster-specific effect to be added to model, but the FE approach allows that effect to correlate with the predictors, while the RE does not (by default). In practice however, this means that they may end up being quite different conceptual models as well. As with cluster robust standard errors, economists, and again those trained in that fashion, have historically preferred these models. In my experience they are rarely used in other disciplines.</p>
+<p><span class="emph">Fixed Effects</span> (FE) models are a terribly named approach to dealing with clustered data, but in the simplest case, serve as a contrast to the random effects (RE) approach in which there are only random intercepts<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Despite the nomenclature, there is mainly one key difference between these models and the ‘mixed’ models we discuss. Both allow a (random) cluster-specific effect to be added to model, but the FE approach allows that effect to correlate with the predictors, while the RE does not (by default). In practice however, this means that they may end up being quite different conceptual models as well. As with cluster robust standard errors, economists, and again those trained in that fashion, have historically preferred these models. In my experience they are rarely used in other disciplines.</p>
 <p>First, let us understand this cluster-specific effect. In the standard regression setting we have a basic intercept, while here, each cluster will provide a nudge above or below that overall effect. Consider the following model (ignoring treatment for now):</p>
 <p><span class="math display">\[ y  = \textrm{Int} + \textrm{ClusterEffect} + b*\mathrm{time} + \epsilon  \]</span></p>
-<p>The cluster effect is different from one cluster to the next, but constant for a given cluster. One way we could perform such a model is just to include <code>id</code> as a predictor, thereby getting a unique estimate for each cluster added to the model. In other words, we can also see the situation as if one had simply created a dummy variable for <code>id</code> and conducted a standard linear model. This is in fact how one can think of the FE model, though where the cluster-specific effects are assumed constants to be estimated, and in the past these models were sometimes referred to as least squares dummy variable (LSDV) regression models<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>. If you actually run the LSDV model, the statistical results for time will be identical to the fixed effects model.</p>
+<p>The cluster effect is different from one cluster to the next, but constant for a given cluster. One way we could perform such a model is just to include <code>id</code> as a predictor, thereby getting a unique estimate for each cluster added to the model. In other words, we can also see the situation as if one had simply created a dummy variable for <code>id</code> and conducted a standard linear model. This is in fact how one can think of the FE model, though where the cluster-specific effects are assumed constants to be estimated, and in the past these models were sometimes referred to as least squares dummy variable (LSDV) regression models<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. If you actually run the LSDV model, the statistical results for time will be identical to the fixed effects model.</p>
 <p>Why would we be worried about the potential correlation between the cluster-specific effects and the model covariates? In typical social science and economic data it’s probably likely that unspecified cluster level effects might have some correlation with the individual level covariates. This leads to inconsistent estimates in the RE approach, and as such the FE might be used instead.</p>
 <p>In the following we use the <span class="pack">plm</span> package to estimate the FE model. I highly recommend reading the excellent <a href="https://cran.r-project.org/web/packages/plm/vignettes/plm.pdf">vignette</a> for this package if you are one of those econometrically trained folk new to R or the mixed model approach, or conversely, other folk wishing to understand the econometric perspective.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">FE_mod =<span class="st"> </span><span class="kw">plm</span>(y <span class="op">~</span><span class="st"> </span><span class="kw">as.numeric</span>(time) <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">index=</span><span class="st">&#39;id&#39;</span>, <span class="dt">model=</span><span class="st">&#39;within&#39;</span>)
-<span class="kw">summary</span>(FE_mod)</code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">FE_mod =<span class="st"> </span><span class="kw">plm</span>(y <span class="op">~</span><span class="st"> </span><span class="kw">as.numeric</span>(time) <span class="op">+</span><span class="st"> </span>treatment, <span class="dt">data=</span>d, <span class="dt">index=</span><span class="st">&#39;id&#39;</span>, <span class="dt">model=</span><span class="st">&#39;within&#39;</span>)</a>
+<a class="sourceLine" id="cb27-2" data-line-number="2"><span class="kw">summary</span>(FE_mod)</a></code></pre></div>
 <pre><code>Oneway (individual) effect Within Model
 
 Call:
@@ -267,14 +295,14 @@ Adj. R-Squared: 0.26627
 F-statistic: 6128.62 on 1 and 7499 DF, p-value: &lt; 2.22e-16</code></pre>
 <p>Note how there is no intercept or treatment effect. In this circumstance of a random intercept model, the FE model can also be seen as a ‘demeaning’ approach, were the model within a cluster is:</p>
 <p><span class="math display">\[y_i-\bar{y_i} = (X_i-\bar{X_i})\beta + (\epsilon-\bar{\epsilon_i})\]</span></p>
-<p>In other words, we subtract the mean from each covariate and response and run the model that way (this is also known as the within transformation, but again, mostly to those from the econometrics world; it is more often referred to as ‘centering’). Note the following produces the same result, although the standard error for time is off<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a>.</p>
+<p>In other words, we subtract the mean from each covariate and response and run the model that way (this is also known as the within transformation, but again, mostly to those from the econometrics world; it is more often referred to as ‘centering’). Note the following produces the same result, although the standard error for time is off<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>.</p>
 <div class="fold s">
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(id) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">ybar =</span> y<span class="op">-</span><span class="kw">mean</span>(y),
-         <span class="dt">timebar =</span> time<span class="op">-</span><span class="kw">mean</span>(time)) <span class="op">%$%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">lm</span>(ybar <span class="op">~</span><span class="st"> </span>timebar) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>summary</code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1">d <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb29-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(id) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb29-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">ybar =</span> y<span class="op">-</span><span class="kw">mean</span>(y),</a>
+<a class="sourceLine" id="cb29-4" data-line-number="4">         <span class="dt">timebar =</span> time<span class="op">-</span><span class="kw">mean</span>(time)) <span class="op">%$%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb29-5" data-line-number="5"><span class="st">  </span><span class="kw">lm</span>(ybar <span class="op">~</span><span class="st"> </span>timebar) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb29-6" data-line-number="6"><span class="st">  </span>summary</a></code></pre></div>
 <pre><code>
 Call:
 lm(formula = ybar ~ timebar)
@@ -294,8 +322,8 @@ Residual standard error: 0.629 on 9998 degrees of freedom
 Multiple R-squared:  0.4497,    Adjusted R-squared:  0.4497 
 F-statistic:  8171 on 1 and 9998 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<p>Because of this, if something is constant within a cluster, it drops out of the model, and this includes anything that has only one observation even if the covariate is normally time-varying. So, not only do you lose the ability to model cluster level effects, though these are ‘controlled for’, you also lose data. In this we lose the treatment effect entirely, which would be completely unacceptable in most circumstances<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a>.</p>
-<p>There seem to be philosophical reasons why some prefer FE models that go beyond the practical, because I don’t understand the often rigid preference by some adherents over RE models given the drawbacks. I personally have never come across a valid justification for not investigating cluster level covariates if they are available (i.e. almost always in social science, educational, economic, epidemiological and other data, and often would simply include cluster-level averages of available variables). In addition, few of the applications of FE models actually seem interested in the cluster-specific effects, in short treating the clustering as a nuisance, much like the cluster-robust standard error approach<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a>.</p>
+<p>Because of this, if something is constant within a cluster, it drops out of the model, and this includes anything that has only one observation even if the covariate is normally time-varying. So, not only do you lose the ability to model cluster level effects, though these are ‘controlled for’, you also lose data. In this we lose the treatment effect entirely, which would be completely unacceptable in most circumstances<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>.</p>
+<p>There seem to be philosophical reasons why some prefer FE models that go beyond the practical, because I don’t understand the often rigid preference by some adherents over RE models given the drawbacks. I personally have never come across a valid justification for not investigating cluster level covariates if they are available (i.e. almost always in social science, educational, economic, epidemiological and other data, and often would simply include cluster-level averages of available variables). In addition, few of the applications of FE models actually seem interested in the cluster-specific effects, in short treating the clustering as a nuisance, much like the cluster-robust standard error approach<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</p>
 <div id="pros-4" class="section level2">
 <h2>Pros</h2>
 <ul>
@@ -308,24 +336,24 @@ F-statistic:  8171 on 1 and 9998 DF,  p-value: &lt; 2.2e-16</code></pre>
 <li>Ignores cluster level covariates or anything cluster constant (i.e. will almost always lose data).</li>
 <li>Doesn’t easily extend to more complex clustering structures.</li>
 <li>Less efficient than RE if RE assumption holds</li>
-<li>Technically one can do something akin to random slopes also<a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a> (mentioned in passing in Greene), but nothing out there does.</li>
+<li>Technically one can do something akin to random slopes also<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a> (mentioned in passing in Greene), but nothing out there does.</li>
 <li>Awkward (my opinion) extension to GLM setting for binary and counts</li>
 <li>More will be pointed out with the mixed models</li>
 </ul>
-<p>Gist: If your goal is statistical consistency above all other considerations, this approach is for you. However, given that with mixed models we can potentially overcome the primary issue that the FE model addresses (RE correlated with covariates<a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a>), this seems a difficult modeling approach to justify. For more see Bell et al. (2016). Fixed and Random effects: making an informed choice.</p>
+<p>Gist: If your goal is statistical consistency above all other considerations, this approach is for you. However, given that with mixed models we can potentially overcome the primary issue that the FE model addresses (RE correlated with covariates<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>), this seems a difficult modeling approach to justify. For more see Bell et al. (2016). Fixed and Random effects: making an informed choice.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="5">
-<li id="fn5"><p>Actually, FE models extend beyond this but I’ve never seen the treatment in textbook presentations, nor am familiar with tools that do so aside from the latent variable approach.<a href="fixed-effects-models.html#fnref5">↩</a></p></li>
-<li id="fn6"><p>This <a href="http://www.stata.com/support/faqs/statistics/intercept-in-fixed-effects-model/">Stata note</a> highlights the distinction.<a href="fixed-effects-models.html#fnref6">↩</a></p></li>
-<li id="fn7"><p>This is due to the fact that estimation of the group means was not taken into account.<a href="fixed-effects-models.html#fnref7">↩</a></p></li>
-<li id="fn8"><p>Note that you could still get the interaction of time x treatment, which you’d definitely want to examine in the experimental longitudinal setting. In other circumstances and with numerous covariates, this may become unwieldy, and then there are the issues of when the interaction is not significant, you have no main effect to fall back on, and you’re also testing an interaction without all the component main effects.<a href="fixed-effects-models.html#fnref8">↩</a></p></li>
-<li id="fn9"><p>Still applies here, i.e. we can still use cluster robust standard errors.<a href="fixed-effects-models.html#fnref9">↩</a></p></li>
-<li id="fn10"><p>And you can defeat the purpose of the FE model by include a covariate by group interaction. However, there would also be no regularizing effect on all the coefficients produced by such a model, unlike the RE model.<a href="fixed-effects-models.html#fnref10">↩</a></p></li>
-<li id="fn11"><p>One can use aggregated values of the potentially offending covariates as cluster level covariates. For example, if we had people clustered within political district, we could use average income as a district-level covariate. Such models are sometimes referred to as hybrids, incorporating both the FE and RE approaches, but this is unwarranted. All three are simply random effects models of different kinds.<a href="fixed-effects-models.html#fnref11">↩</a></p></li>
+<li id="fn5"><p>Actually, FE models extend beyond this but I’ve never seen the treatment in textbook presentations, nor am familiar with tools that do so aside from the latent variable approach.<a href="fixed-effects-models.html#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>This <a href="http://www.stata.com/support/faqs/statistics/intercept-in-fixed-effects-model/">Stata note</a> highlights the distinction.<a href="fixed-effects-models.html#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p>This is due to the fact that estimation of the group means was not taken into account.<a href="fixed-effects-models.html#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p>Note that you could still get the interaction of time x treatment, which you’d definitely want to examine in the experimental longitudinal setting. In other circumstances and with numerous covariates, this may become unwieldy, and then there are the issues of when the interaction is not significant, you have no main effect to fall back on, and you’re also testing an interaction without all the component main effects.<a href="fixed-effects-models.html#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p>Still applies here, i.e. we can still use cluster robust standard errors.<a href="fixed-effects-models.html#fnref9" class="footnote-back">↩</a></p></li>
+<li id="fn10"><p>And you can defeat the purpose of the FE model by include a covariate by group interaction. However, there would also be no regularizing effect on all the coefficients produced by such a model, unlike the RE model.<a href="fixed-effects-models.html#fnref10" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p>One can use aggregated values of the potentially offending covariates as cluster level covariates. For example, if we had people clustered within political district, we could use average income as a district-level covariate. Such models are sometimes referred to as hybrids, incorporating both the FE and RE approaches, but this is unwarranted. All three are simply random effects models of different kinds.<a href="fixed-effects-models.html#fnref11" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -386,7 +414,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
