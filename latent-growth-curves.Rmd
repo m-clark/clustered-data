@@ -76,7 +76,7 @@ VarCorr(mixed_mod_nocorr, rdig=3)[,1:2] %>%             # note: you have removed
 Gist: Growth curve models are very flexible, but they are also problematic simply because they are from the SEM world, which is one where models are notoriously misapplied.  Furthermore, there are no common uses of growth curve models that would not be more easily implemented in one of several R packages[^growthtomixed] and various other languages and statistical programs.  While I find the latent variable interpretation very much intriguing,  the latent variable approach is not something I'd normally consider for this setting.
 
 
-[^semnotes]: See my LGC chapter in this [SEM document](https://m-clark.github.io/docs/sem).  Once you see it there you'll know why I did not do so here.
+[^semnotes]: See my LGC chapter in this [SEM document](https://m-clark.github.io/sem).  Once you see it there you'll know why I did not do so here.
 
 [^growthtomixed]: See the <span class="pack">mediation</span> package for mediation with mixed models, <span class="pack">flexMix</span> for growth mixture models, Bayesian approaches for parallel processes etc.
 

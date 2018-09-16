@@ -1,4 +1,4 @@
-# Cluster robust variances
+# Cluster Robust Variances
 
 As mentioned, if we ignore the clustering, the so-called fixed effects estimates (i.e. coefficients) are correct, but their variances are not.  We can get proper estimates of the standard errors via <span class="emph">cluster robust standard errors</span>, which are very popular in econometrics and fields trained in that fashion, but not widely used elsewhere in my experience.  Essentially, these allow one to fire-and-forget, and treat the clustering as more of a nuisance.
 

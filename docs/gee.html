@@ -24,7 +24,7 @@
 
 
 
-<meta name="date" content="2018-07-18">
+<meta name="date" content="2018-09-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,7 +32,7 @@
   
   <link rel="shortcut icon" href="img/R.ico" type="image/x-icon">
 <link rel="prev" href="mixed-models.html">
-<link rel="next" href="latent-growth-curve.html">
+<link rel="next" href="latent-growth-curves.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -46,17 +46,14 @@
 
 
 
-<script src="libs/htmlwidgets-1.0/htmlwidgets.js"></script>
-<script src="libs/datatables-binding-0.2/datatables.js"></script>
-<link href="libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="libs/plotly-binding-4.7.1/plotly.js"></script>
-<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
-<link href="libs/plotlyjs-1.29.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotlyjs-1.29.2/plotly-latest.min.js"></script>
 
 
 <style type="text/css">
@@ -125,8 +122,8 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="css/standard_html.css" type="text/css" />
 <link rel="stylesheet" href="css/book.css" type="text/css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" type="text/css" />
 </head>
 
 <body>
@@ -139,32 +136,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class='before'><a href="https://m-clark.github.io/">Clustered Data</a></li>
+<li class='before'><a href="./">Clustered Data</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#what-approach-to-use"><i class="fa fa-check"></i>What approach to use?</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#preliminaries"><i class="fa fa-check"></i>Preliminaries</a><ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#things-to-note"><i class="fa fa-check"></i>Things to note</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="data-setup.html"><a href="data-setup.html"><i class="fa fa-check"></i>Data setup</a></li>
-<li class="chapter" data-level="" data-path="ignore-data-dependency.html"><a href="ignore-data-dependency.html"><i class="fa fa-check"></i>Ignore data dependency</a><ul>
-<li class="chapter" data-level="" data-path="ignore-data-dependency.html"><a href="ignore-data-dependency.html#pros"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="ignore-data-dependency.html"><a href="ignore-data-dependency.html#cons"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i>Getting Started</a></li>
+<li class="chapter" data-level="" data-path="ignore-structure.html"><a href="ignore-structure.html"><i class="fa fa-check"></i>Ignore Data Dependency</a><ul>
+<li class="chapter" data-level="" data-path="ignore-structure.html"><a href="ignore-structure.html#pros"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="ignore-structure.html"><a href="ignore-structure.html#cons"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="model-every-group.html"><a href="model-every-group.html"><i class="fa fa-check"></i>Model every group</a><ul>
-<li class="chapter" data-level="" data-path="model-every-group.html"><a href="model-every-group.html#pros-1"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="model-every-group.html"><a href="model-every-group.html#cons-1"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="model-groups.html"><a href="model-groups.html"><i class="fa fa-check"></i>Model Every Group</a><ul>
+<li class="chapter" data-level="" data-path="model-groups.html"><a href="model-groups.html#pros-1"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="model-groups.html"><a href="model-groups.html#cons-1"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="cluster-robust-variances.html"><a href="cluster-robust-variances.html"><i class="fa fa-check"></i>Cluster robust variances</a><ul>
+<li class="chapter" data-level="" data-path="cluster-robust-variances.html"><a href="cluster-robust-variances.html"><i class="fa fa-check"></i>Cluster Robust Variances</a><ul>
 <li class="chapter" data-level="" data-path="cluster-robust-variances.html"><a href="cluster-robust-variances.html#pros-2"><i class="fa fa-check"></i>Pros</a></li>
 <li class="chapter" data-level="" data-path="cluster-robust-variances.html"><a href="cluster-robust-variances.html#cons-2"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="a-survey-approach.html"><a href="a-survey-approach.html"><i class="fa fa-check"></i>A Survey Approach</a><ul>
-<li class="chapter" data-level="" data-path="a-survey-approach.html"><a href="a-survey-approach.html#pros-3"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="a-survey-approach.html"><a href="a-survey-approach.html#cons-3"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="survey.html"><a href="survey.html"><i class="fa fa-check"></i>A Survey Approach</a><ul>
+<li class="chapter" data-level="" data-path="survey.html"><a href="survey.html#pros-3"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="survey.html"><a href="survey.html#cons-3"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="fixed-effects-models.html"><a href="fixed-effects-models.html"><i class="fa fa-check"></i>Fixed Effects Models</a><ul>
 <li class="chapter" data-level="" data-path="fixed-effects-models.html"><a href="fixed-effects-models.html#pros-4"><i class="fa fa-check"></i>Pros</a></li>
@@ -174,13 +170,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mixed-models.html"><a href="mixed-models.html#pros-5"><i class="fa fa-check"></i>Pros</a></li>
 <li class="chapter" data-level="" data-path="mixed-models.html"><a href="mixed-models.html#cons-5"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="generalized-estimating-equations.html"><a href="generalized-estimating-equations.html"><i class="fa fa-check"></i>Generalized Estimating Equations</a><ul>
-<li class="chapter" data-level="" data-path="generalized-estimating-equations.html"><a href="generalized-estimating-equations.html#pros-6"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="generalized-estimating-equations.html"><a href="generalized-estimating-equations.html#cons-6"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="gee.html"><a href="gee.html"><i class="fa fa-check"></i>Generalized Estimating Equations</a><ul>
+<li class="chapter" data-level="" data-path="gee.html"><a href="gee.html#pros-6"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="gee.html"><a href="gee.html#cons-6"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="latent-growth-curve.html"><a href="latent-growth-curve.html"><i class="fa fa-check"></i>Latent Growth Curve</a><ul>
-<li class="chapter" data-level="" data-path="latent-growth-curve.html"><a href="latent-growth-curve.html#pros-7"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="latent-growth-curve.html"><a href="latent-growth-curve.html#cons-7"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="latent-growth-curves.html"><a href="latent-growth-curves.html"><i class="fa fa-check"></i>Latent Growth Curve</a><ul>
+<li class="chapter" data-level="" data-path="latent-growth-curves.html"><a href="latent-growth-curves.html#pros-7"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="latent-growth-curves.html"><a href="latent-growth-curves.html#cons-7"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i>Summary</a><ul>
 <li class="chapter" data-level="" data-path="summary.html"><a href="summary.html#fixed-effects"><i class="fa fa-check"></i>Fixed Effects</a></li>
@@ -197,8 +193,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html#comparisonissues"><i class="fa fa-check"></i>Comparison/Issues</a></li>
 </ul></li>
 <li class="divider"></li>
-<li class='after'><a href="https://m-clark.github.io/"><img src="img/mc.png" style="width:50%; padding:0px 0; display:block; margin: 0 auto;" alt="MC logo"></a></li>
-<li class='after'><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="width:50%; border-width:0; display:block; margin: 0 auto;" src="img/ccbysa.png" /></a></li>
+<li class='after'">
+   <a href="https://m-clark.github.io/">
+      <img src="img/mc_logo.png" style="width:25%; padding:0px 0; display:block; margin: 0 auto;" alt="MC logo">
+   </a>
+</li>
+<li class='after'">
+   <div style='text-align:center'>
+      <a href="https://github.com/m-clark/">
+         <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+      </a>
+   </div>
+</li>
+<li class='after'">
+   <div style='text-align:center'>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+         <i class="fab fa-creative-commons fa-lg"></i>
+         <i class="fab fa-creative-commons-by fa-lg"></i>
+         <i class="fab fa-creative-commons-sa fa-lg"></i>
+      </a>
+   </div>
+</li>
 
 </ul>
 
@@ -209,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><span style="font-size:200%; font-variant:small-caps; ">Clustered Data</span></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Clustered Data</a>
           </h1>
         </div>
 
@@ -217,49 +232,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!-- http://stackoverflow.com/questions/37755037/how-to-add-code-folding-to-output-chunks-in-rmarkdown-html-documents/37839683#37839683 -->
-
-<script>
-$(document).ready(function() {
-
-  $chunks = $('.fold');
-
-  $chunks.each(function () {
-
-    // add button to source code chunks
-    if ( $(this).hasClass('s') ) {
-      $('pre.r', this).prepend("<div class=\"showopt\">Show Source</div><br style=\"line-height:22px;\"/>");
-      $('pre.r', this).children('code').attr('class', 'folded');
-    }
-
-    // add button to output chunks
-    if ( $(this).hasClass('o') ) {
-      $('pre:not(.r)', this).has('code').prepend("<div class=\"showopt\">Show Output</div><br style=\"line-height:22px;\"/>");
-      $('pre:not(.r)', this).children('code:not(r)').addClass('folded');
-
-      // add button to plots
-      $(this).find('img').wrap('<pre class=\"plot\"></pre>');
-      $('pre.plot', this).prepend("<div class=\"showopt\">Show Plot</div><br style=\"line-height:22px;\"/>");
-      $('pre.plot', this).children('img').addClass('folded');
-
-    }
-  });
-
-  // hide all chunks when document is loaded
-  $('.folded').css('display', 'none')
-
-  // function to toggle the visibility
-  $('.showopt').click(function() {
-    var label = $(this).html();
-    if (label.indexOf("Show") >= 0) {
-      $(this).html(label.replace("Show", "Hide"));
-    } else {
-      $(this).html(label.replace("Hide", "Show"));
-    }
-    $(this).siblings('code, img').slideToggle('fast', 'swing');
-  });
-});
-</script>
 <div id="generalized-estimating-equations" class="section level1">
 <h1>Generalized Estimating Equations</h1>
 <p>A <span class="emph">generalized estimating equation</span> is an <em>estimation procedure</em><a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> for dealing with clustered data, and is seemingly very popular in disciplines trained with a biostatistics perspective, but perhaps not too commonly used elsewhere. Models using this approach are sometimes called <span class="emph">marginal models</span>, and can be seen as follows, where the target <span class="math inline">\(y\)</span> is multivariate normal with mean vector <span class="math inline">\(X\beta\)</span> and covariance matrix <span class="math inline">\(\Sigma\)</span>, which is typically block diagonal as we created at the beginning<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>.</p>
@@ -527,14 +499,14 @@ $(document).ready(function() {
 <div class="footnotes">
 <hr />
 <ol start="13">
-<li id="fn13"><p>Not a model! We’re just doing a GLM here.<a href="generalized-estimating-equations.html#fnref13" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p>Not a model! We’re just doing a GLM here.<a href="gee.html#fnref13" class="footnote-back">↩</a></p></li>
 <li id="fn14"><p>The corresponding matrix formulation for the <em>conditional</em> model of the random effects approach is:
 <span class="math display">\[ y \sim \mathcal{N}(X\beta + Z\Gamma,  \Sigma) \]</span>
-where <span class="math inline">\(Z\)</span> is some subset of <span class="math inline">\(X\)</span>, and <span class="math inline">\(\Gamma\)</span> contains the random effects.<a href="generalized-estimating-equations.html#fnref14" class="footnote-back">↩</a></p></li>
-<li id="fn15"><p><span class="pack">lme4</span> is a very widely used mixed model package that does not allow the specification of a correlation structure for the residuals.<a href="generalized-estimating-equations.html#fnref15" class="footnote-back">↩</a></p></li>
-<li id="fn16"><p>CSCAR director and University of Michigan statistics faculty <a href="https://github.com/kshedden">Kerby Shedden</a> has worked on a Python implementation for nested structures as part of the <a href="http://statsmodels.sourceforge.net/devel/gee.html">statsmodels module</a>.<a href="generalized-estimating-equations.html#fnref16" class="footnote-back">↩</a></p></li>
-<li id="fn17"><p>This is a paraphrase of a response by Kerby Shedden to a question on the CSCAR help list that I thought was succinct and easy to understand. He continues: “I don’t have a strong opinion about this. It is almost always good to control for observed variables to reduce heterogeneity and get a sharper analysis. But it’s less clear to me that you should control for things that are unattributable (e.g. family effects of unknown cause), even if it is technically possible to do so. It comes down to this: do you want to measure my risk (for being male) by comparing me to my sister (or an imaginary sister who is identical to me in all observables except gender)…or do you want to compare me to an unrelated female, also identical to me in terms of all observables?”<a href="generalized-estimating-equations.html#fnref17" class="footnote-back">↩</a></p></li>
-<li id="fn18"><p>Recall the note at the end of the <a href="cluster-robust-variances.html#cluster-robust-variances">cluster robust SE chapter</a>.<a href="generalized-estimating-equations.html#fnref18" class="footnote-back">↩</a></p></li>
+where <span class="math inline">\(Z\)</span> is some subset of <span class="math inline">\(X\)</span>, and <span class="math inline">\(\Gamma\)</span> contains the random effects.<a href="gee.html#fnref14" class="footnote-back">↩</a></p></li>
+<li id="fn15"><p><span class="pack">lme4</span> is a very widely used mixed model package that does not allow the specification of a correlation structure for the residuals.<a href="gee.html#fnref15" class="footnote-back">↩</a></p></li>
+<li id="fn16"><p>CSCAR director and University of Michigan statistics faculty <a href="https://github.com/kshedden">Kerby Shedden</a> has worked on a Python implementation for nested structures as part of the <a href="http://statsmodels.sourceforge.net/devel/gee.html">statsmodels module</a>.<a href="gee.html#fnref16" class="footnote-back">↩</a></p></li>
+<li id="fn17"><p>This is a paraphrase of a response by Kerby Shedden to a question on the CSCAR help list that I thought was succinct and easy to understand. He continues: “I don’t have a strong opinion about this. It is almost always good to control for observed variables to reduce heterogeneity and get a sharper analysis. But it’s less clear to me that you should control for things that are unattributable (e.g. family effects of unknown cause), even if it is technically possible to do so. It comes down to this: do you want to measure my risk (for being male) by comparing me to my sister (or an imaginary sister who is identical to me in all observables except gender)…or do you want to compare me to an unrelated female, also identical to me in terms of all observables?”<a href="gee.html#fnref17" class="footnote-back">↩</a></p></li>
+<li id="fn18"><p>Recall the note at the end of the <a href="cluster-robust-variances.html#cluster-robust-variances">cluster robust SE chapter</a>.<a href="gee.html#fnref18" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -543,7 +515,7 @@ where <span class="math inline">\(Z\)</span> is some subset of <span class="math
         </div>
       </div>
 <a href="mixed-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="latent-growth-curve.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="latent-growth-curves.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -565,27 +537,23 @@ gitbook.start({
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["twitter", "facebook", "google", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
 "family": "sans",
 "size": 2
 },
-"edit": {
-"link": null,
-"text": null
-},
-"download": ["Clustered_Data.pdf", "Clustered_Data.epub"],
+"edit": null,
+"download": null,
 "toc": {
 "collapse": "section",
-"edit": null,
 "depth": 2,
 "scroll_highlight": true
 },
+"df_print": "kable",
 "highlight": "pygments",
-"search": true,
-"epub": true
+"search": true
 });
 });
 </script>

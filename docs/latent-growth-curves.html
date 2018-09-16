@@ -24,14 +24,14 @@
 
 
 
-<meta name="date" content="2018-07-18">
+<meta name="date" content="2018-09-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="shortcut icon" href="img/R.ico" type="image/x-icon">
-<link rel="prev" href="generalized-estimating-equations.html">
+<link rel="prev" href="gee.html">
 <link rel="next" href="summary.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -46,17 +46,14 @@
 
 
 
-<script src="libs/htmlwidgets-1.0/htmlwidgets.js"></script>
-<script src="libs/datatables-binding-0.2/datatables.js"></script>
-<link href="libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="libs/plotly-binding-4.7.1/plotly.js"></script>
-<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
-<link href="libs/plotlyjs-1.29.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotlyjs-1.29.2/plotly-latest.min.js"></script>
 
 
 <style type="text/css">
@@ -125,8 +122,8 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="css/standard_html.css" type="text/css" />
 <link rel="stylesheet" href="css/book.css" type="text/css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" type="text/css" />
 </head>
 
 <body>
@@ -139,32 +136,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class='before'><a href="https://m-clark.github.io/">Clustered Data</a></li>
+<li class='before'><a href="./">Clustered Data</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a><ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#what-approach-to-use"><i class="fa fa-check"></i>What approach to use?</a></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#preliminaries"><i class="fa fa-check"></i>Preliminaries</a><ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#things-to-note"><i class="fa fa-check"></i>Things to note</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="data-setup.html"><a href="data-setup.html"><i class="fa fa-check"></i>Data setup</a></li>
-<li class="chapter" data-level="" data-path="ignore-data-dependency.html"><a href="ignore-data-dependency.html"><i class="fa fa-check"></i>Ignore data dependency</a><ul>
-<li class="chapter" data-level="" data-path="ignore-data-dependency.html"><a href="ignore-data-dependency.html#pros"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="ignore-data-dependency.html"><a href="ignore-data-dependency.html#cons"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i>Getting Started</a></li>
+<li class="chapter" data-level="" data-path="ignore-structure.html"><a href="ignore-structure.html"><i class="fa fa-check"></i>Ignore Data Dependency</a><ul>
+<li class="chapter" data-level="" data-path="ignore-structure.html"><a href="ignore-structure.html#pros"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="ignore-structure.html"><a href="ignore-structure.html#cons"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="model-every-group.html"><a href="model-every-group.html"><i class="fa fa-check"></i>Model every group</a><ul>
-<li class="chapter" data-level="" data-path="model-every-group.html"><a href="model-every-group.html#pros-1"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="model-every-group.html"><a href="model-every-group.html#cons-1"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="model-groups.html"><a href="model-groups.html"><i class="fa fa-check"></i>Model Every Group</a><ul>
+<li class="chapter" data-level="" data-path="model-groups.html"><a href="model-groups.html#pros-1"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="model-groups.html"><a href="model-groups.html#cons-1"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="cluster-robust-variances.html"><a href="cluster-robust-variances.html"><i class="fa fa-check"></i>Cluster robust variances</a><ul>
+<li class="chapter" data-level="" data-path="cluster-robust-variances.html"><a href="cluster-robust-variances.html"><i class="fa fa-check"></i>Cluster Robust Variances</a><ul>
 <li class="chapter" data-level="" data-path="cluster-robust-variances.html"><a href="cluster-robust-variances.html#pros-2"><i class="fa fa-check"></i>Pros</a></li>
 <li class="chapter" data-level="" data-path="cluster-robust-variances.html"><a href="cluster-robust-variances.html#cons-2"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="a-survey-approach.html"><a href="a-survey-approach.html"><i class="fa fa-check"></i>A Survey Approach</a><ul>
-<li class="chapter" data-level="" data-path="a-survey-approach.html"><a href="a-survey-approach.html#pros-3"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="a-survey-approach.html"><a href="a-survey-approach.html#cons-3"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="survey.html"><a href="survey.html"><i class="fa fa-check"></i>A Survey Approach</a><ul>
+<li class="chapter" data-level="" data-path="survey.html"><a href="survey.html#pros-3"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="survey.html"><a href="survey.html#cons-3"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="fixed-effects-models.html"><a href="fixed-effects-models.html"><i class="fa fa-check"></i>Fixed Effects Models</a><ul>
 <li class="chapter" data-level="" data-path="fixed-effects-models.html"><a href="fixed-effects-models.html#pros-4"><i class="fa fa-check"></i>Pros</a></li>
@@ -174,13 +170,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mixed-models.html"><a href="mixed-models.html#pros-5"><i class="fa fa-check"></i>Pros</a></li>
 <li class="chapter" data-level="" data-path="mixed-models.html"><a href="mixed-models.html#cons-5"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="generalized-estimating-equations.html"><a href="generalized-estimating-equations.html"><i class="fa fa-check"></i>Generalized Estimating Equations</a><ul>
-<li class="chapter" data-level="" data-path="generalized-estimating-equations.html"><a href="generalized-estimating-equations.html#pros-6"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="generalized-estimating-equations.html"><a href="generalized-estimating-equations.html#cons-6"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="gee.html"><a href="gee.html"><i class="fa fa-check"></i>Generalized Estimating Equations</a><ul>
+<li class="chapter" data-level="" data-path="gee.html"><a href="gee.html#pros-6"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="gee.html"><a href="gee.html#cons-6"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="latent-growth-curve.html"><a href="latent-growth-curve.html"><i class="fa fa-check"></i>Latent Growth Curve</a><ul>
-<li class="chapter" data-level="" data-path="latent-growth-curve.html"><a href="latent-growth-curve.html#pros-7"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="latent-growth-curve.html"><a href="latent-growth-curve.html#cons-7"><i class="fa fa-check"></i>Cons</a></li>
+<li class="chapter" data-level="" data-path="latent-growth-curves.html"><a href="latent-growth-curves.html"><i class="fa fa-check"></i>Latent Growth Curve</a><ul>
+<li class="chapter" data-level="" data-path="latent-growth-curves.html"><a href="latent-growth-curves.html#pros-7"><i class="fa fa-check"></i>Pros</a></li>
+<li class="chapter" data-level="" data-path="latent-growth-curves.html"><a href="latent-growth-curves.html#cons-7"><i class="fa fa-check"></i>Cons</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i>Summary</a><ul>
 <li class="chapter" data-level="" data-path="summary.html"><a href="summary.html#fixed-effects"><i class="fa fa-check"></i>Fixed Effects</a></li>
@@ -197,8 +193,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html#comparisonissues"><i class="fa fa-check"></i>Comparison/Issues</a></li>
 </ul></li>
 <li class="divider"></li>
-<li class='after'><a href="https://m-clark.github.io/"><img src="img/mc.png" style="width:50%; padding:0px 0; display:block; margin: 0 auto;" alt="MC logo"></a></li>
-<li class='after'><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="width:50%; border-width:0; display:block; margin: 0 auto;" src="img/ccbysa.png" /></a></li>
+<li class='after'">
+   <a href="https://m-clark.github.io/">
+      <img src="img/mc_logo.png" style="width:25%; padding:0px 0; display:block; margin: 0 auto;" alt="MC logo">
+   </a>
+</li>
+<li class='after'">
+   <div style='text-align:center'>
+      <a href="https://github.com/m-clark/">
+         <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+      </a>
+   </div>
+</li>
+<li class='after'">
+   <div style='text-align:center'>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+         <i class="fab fa-creative-commons fa-lg"></i>
+         <i class="fab fa-creative-commons-by fa-lg"></i>
+         <i class="fab fa-creative-commons-sa fa-lg"></i>
+      </a>
+   </div>
+</li>
 
 </ul>
 
@@ -209,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><span style="font-size:200%; font-variant:small-caps; ">Clustered Data</span></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Clustered Data</a>
           </h1>
         </div>
 
@@ -217,49 +232,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!-- http://stackoverflow.com/questions/37755037/how-to-add-code-folding-to-output-chunks-in-rmarkdown-html-documents/37839683#37839683 -->
-
-<script>
-$(document).ready(function() {
-
-  $chunks = $('.fold');
-
-  $chunks.each(function () {
-
-    // add button to source code chunks
-    if ( $(this).hasClass('s') ) {
-      $('pre.r', this).prepend("<div class=\"showopt\">Show Source</div><br style=\"line-height:22px;\"/>");
-      $('pre.r', this).children('code').attr('class', 'folded');
-    }
-
-    // add button to output chunks
-    if ( $(this).hasClass('o') ) {
-      $('pre:not(.r)', this).has('code').prepend("<div class=\"showopt\">Show Output</div><br style=\"line-height:22px;\"/>");
-      $('pre:not(.r)', this).children('code:not(r)').addClass('folded');
-
-      // add button to plots
-      $(this).find('img').wrap('<pre class=\"plot\"></pre>');
-      $('pre.plot', this).prepend("<div class=\"showopt\">Show Plot</div><br style=\"line-height:22px;\"/>");
-      $('pre.plot', this).children('img').addClass('folded');
-
-    }
-  });
-
-  // hide all chunks when document is loaded
-  $('.folded').css('display', 'none')
-
-  // function to toggle the visibility
-  $('.showopt').click(function() {
-    var label = $(this).html();
-    if (label.indexOf("Show") >= 0) {
-      $(this).html(label.replace("Show", "Hide"));
-    } else {
-      $(this).html(label.replace("Hide", "Show"));
-    }
-    $(this).siblings('code, img').slideToggle('fast', 'swing');
-  });
-});
-</script>
 <div id="latent-growth-curve" class="section level1">
 <h1>Latent Growth Curve</h1>
 <p>An alternative approach to mixed models considers the random effects as <span class="emph">latent variables</span> with the outcome at each time point an indicator for the latent variable. I have details <a href="https://m-clark.github.io/docs/sem">elsewhere</a>, but I want to explore this as it is a commonly used technique in the social sciences, especially psychology. <span class="emph">Latent Growth Curve Models</span> are a special case of <span class="emph">structural equation modeling</span>, a highly flexible tool that can incorporate latent variables, indirect effects, multiple outcomes etc. Growth curve models are actually somewhat irregular SEM in the way that they are specified, but for our purposes, we only want to see how the approach works and compare it to previous methods.</p>
@@ -298,18 +270,23 @@ $(document).ready(function() {
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1"><span class="kw">library</span>(lavaan)</a>
 <a class="sourceLine" id="cb43-2" data-line-number="2">growth_mod =<span class="st"> </span><span class="kw">growth</span>(growthmod_syntax, <span class="dt">data=</span>dwide)</a>
 <a class="sourceLine" id="cb43-3" data-line-number="3"><span class="kw">summary</span>(growth_mod, <span class="dt">standardized=</span>T)</a></code></pre></div>
-<pre><code>lavaan (0.5-23.1097) converged normally after  27 iterations
+<pre><code>lavaan 0.6-2 ended normally after 27 iterations
+
+  Optimization method                           NLMINB
+  Number of free parameters                         10
+  Number of equality constraints                     3
 
   Number of observations                          2500
 
   Estimator                                         ML
-  Minimum Function Test Statistic              234.733
+  Model Fit Test Statistic                     234.733
   Degrees of freedom                                11
   P-value (Chi-square)                           0.000
 
 Parameter Estimates:
 
   Information                                 Expected
+  Information saturated (h1) model          Structured
   Standard Errors                             Standard
 
 Latent Variables:
@@ -506,9 +483,9 @@ Variances:
 <div class="footnotes">
 <hr />
 <ol start="19">
-<li id="fn19"><p>See my LGC chapter in this <a href="https://m-clark.github.io/docs/sem">SEM document</a>. Once you see it there you’ll know why I did not do so here.<a href="latent-growth-curve.html#fnref19" class="footnote-back">↩</a></p></li>
-<li id="fn20"><p>MPlus has <a href="https://www.statmodel.com/download/handouts/MuthenV7Part3.pdf">recently</a> incorporated the ability to handle crossed random effects (and see example 9.24 in the version 7 manual), but I have no idea how they work in realistic situations with potentially many, possibly time-varying, covariates, and it’s actually done with their multilevel approach rather than the LGC we’ve been discussing. Furthermore, it requires the Bayesian estimator, which, if you’re going that route you might as well use <span class="pack">rstan</span>, <span class="pack">rjags</span> or similar and have a lot more utility (and clarity) at your disposal. For tools like <span class="pack">lme4</span> and similar, incorporating crossed random effects are no more difficult than other situations, i.e. are 1 line of code, while you’d be debugging the MPlus output for days.<a href="latent-growth-curve.html#fnref20" class="footnote-back">↩</a></p></li>
-<li id="fn21"><p>See the <span class="pack">mediation</span> package for mediation with mixed models, <span class="pack">flexMix</span> for growth mixture models, Bayesian approaches for parallel processes etc.<a href="latent-growth-curve.html#fnref21" class="footnote-back">↩</a></p></li>
+<li id="fn19"><p>See my LGC chapter in this <a href="https://m-clark.github.io/sem">SEM document</a>. Once you see it there you’ll know why I did not do so here.<a href="latent-growth-curves.html#fnref19" class="footnote-back">↩</a></p></li>
+<li id="fn20"><p>MPlus has <a href="https://www.statmodel.com/download/handouts/MuthenV7Part3.pdf">recently</a> incorporated the ability to handle crossed random effects (and see example 9.24 in the version 7 manual), but I have no idea how they work in realistic situations with potentially many, possibly time-varying, covariates, and it’s actually done with their multilevel approach rather than the LGC we’ve been discussing. Furthermore, it requires the Bayesian estimator, which, if you’re going that route you might as well use <span class="pack">rstan</span>, <span class="pack">rjags</span> or similar and have a lot more utility (and clarity) at your disposal. For tools like <span class="pack">lme4</span> and similar, incorporating crossed random effects are no more difficult than other situations, i.e. are 1 line of code, while you’d be debugging the MPlus output for days.<a href="latent-growth-curves.html#fnref20" class="footnote-back">↩</a></p></li>
+<li id="fn21"><p>See the <span class="pack">mediation</span> package for mediation with mixed models, <span class="pack">flexMix</span> for growth mixture models, Bayesian approaches for parallel processes etc.<a href="latent-growth-curves.html#fnref21" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -516,7 +493,7 @@ Variances:
           </div>
         </div>
       </div>
-<a href="generalized-estimating-equations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gee.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="summary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -539,27 +516,23 @@ gitbook.start({
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["twitter", "facebook", "google", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
 "family": "sans",
 "size": 2
 },
-"edit": {
-"link": null,
-"text": null
-},
-"download": ["Clustered_Data.pdf", "Clustered_Data.epub"],
+"edit": null,
+"download": null,
 "toc": {
 "collapse": "section",
-"edit": null,
 "depth": 2,
 "scroll_highlight": true
 },
+"df_print": "kable",
 "highlight": "pygments",
-"search": true,
-"epub": true
+"search": true
 });
 });
 </script>

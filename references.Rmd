@@ -37,7 +37,7 @@ To be honest I can't speak to this reference from experience, though I've read a
 
 - Kline. (2015). Principles and Practice of Structural Equation Modeling. [link](http://www.guilford.com/books/Principles-and-Practice-of-Structural-Equation-Modeling/Rex-Kline/9781462523344)
 
-- [My SEM notes](http://m-clark.github.io/sem/latent-growth-curves.html)
+- [My SEM notes](http://m-clark.github.io/sem/growth-curves.html)
 
 ## Survey Analysis
 

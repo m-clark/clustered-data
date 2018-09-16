@@ -57,9 +57,10 @@ g = rbind(coefllm, coefRE) %>%
   ggplot(aes(x=Coefficient, fill=Model, color=Model)) +
   geom_density(alpha=.5) +
   facet_wrap(~Context) +
-  lazerhawk::theme_trueMinimal() 
-library(plotly)
-ggplotly(tooltip='none', width='auto') %>% layout()
+  theme_trueMinimal() 
+g
+# library(plotly)
+# ggplotly() %>% theme_plotly()
 ```
 
 <br>
@@ -80,7 +81,7 @@ What the visualization makes clear is that the mixed model has a regularizing ef
 ## Cons
 
 - Inconsistent estimates if predictors are correlated with random effect(s) and other steps not taken
-- May have difficult estimation in the generalized case, e.g. logistic model (my experience)
+- May have difficult estimation in the generalized case, e.g. logistic model
 
 Gist: Basically the mixed model can provide everything you need, and not necessarily at the cost of consistency.
 

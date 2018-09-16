@@ -1,4 +1,4 @@
-# Ignore data dependency
+# Ignore Data Dependency
 
 The first thing we can do is ignore the situation and just run a standard regression.  This is actually okay if you have very few clusters, and put the cluster id in the model as a fixed effect.  Otherwise, this is not acceptable with regard to the standard errors (SE), as cluster level covariates will be treated as if there are N*timepoint observations (typically underestimating the SE as a result), while the standard error for the time-varying covariates will not account for the clustering (typically overestimating).
 

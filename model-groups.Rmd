@@ -1,4 +1,4 @@
-# Model every group
+# Model Every Group
 
 We could also run a regression for every group.  This is problematic since we would typically have so little data per group, and too many groups to make sense of.  We'll go ahead and do it anyway.  What if we take the average of all the estimates?
 

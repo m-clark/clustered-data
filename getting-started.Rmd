@@ -1,4 +1,4 @@
-# Data setup
+# Getting Started
 
 First we need to set up the data, and to do so we'll consider the longitudinal setting in which individuals are observed over time[^long]. The goal is to create a data set with several (four) observations per individual, i.e. the 'repeated measures' scenario. Aside from variables that represent individual and time point, I will also create an individual level variable, which means that it is constant for each individual. In this case it will be a simple binary variable indicating 'treatment' or 'control' as in an experiment.
 
